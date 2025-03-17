@@ -40,7 +40,7 @@ This equation shows that the range is maximized when \( \sin(2\theta) \) is maxi
 
 #### **Visual Representation**
 ![Projectile Motion Diagram](images/Ball-projectile-motion-different-angles.png)
-
+![alt text](Projectile_motion.png)
 *Figure 1: Diagram showing projectile motion with different angles of projection.*
 
 
