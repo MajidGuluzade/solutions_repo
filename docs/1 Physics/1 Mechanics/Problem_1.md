@@ -39,9 +39,10 @@ Substituting \( T \):
 This equation shows that the range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( 2\theta = 90^\circ \), or \( \theta = 45^\circ \).
 
 #### **Visual Representation**
-![Projectile Motion Diagram](https://upload.wikimedia.org/wikipedia/commons/7/7e/Projectile_motion.svg)
+![Projectile Motion Diagram](images/projectile_motion.png)
 
 *Figure 1: Diagram showing projectile motion with different angles of projection.*
+
 
 ### Experimental Setup
 
