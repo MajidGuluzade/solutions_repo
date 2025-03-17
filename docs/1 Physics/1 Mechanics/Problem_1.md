@@ -44,26 +44,33 @@ This equation shows that the range is maximized when \( \sin(2\theta) \) is maxi
 *Figure 1: Diagram showing projectile motion with different angles of projection.*
 
 ### Experimental Setup
-To experimentally verify the dependence of range on the angle of projection, the following setup can be used:
+
+#### **Objective:**
+To investigate how the range of a projectile changes with different launch angles, keeping the initial velocity constant.
 
 #### **Materials:**
-- A **projectile launcher**
-- A **protractor**
-- A **measuring tape**
-- A **stopwatch**
+- A **projectile launcher** (with adjustable angles)
+- A **protractor** (to adjust the launch angle)
+- A **measuring tape** (to measure the range)
+- A **stopwatch** (to measure the time of flight)
 - A **smooth launch surface**
+- **A constant weight projectile** (to maintain a fixed initial velocity)
 
 #### **Procedure:**
-1. Set the launcher to a known initial velocity.
-2. Adjust the angle of projection in increments (e.g., 10°, 20°, ..., 80°).
-3. Measure and record the range for each angle.
-4. Repeat the trials to ensure accuracy and calculate the average range.
+1. Set the launcher to a fixed initial velocity.
+2. Vary the launch angle from 10° to 90° in increments (e.g., 10°, 20°, ..., 90°).
+3. For each launch angle, measure and record the range (horizontal distance traveled).
+4. Repeat the trials for each angle to ensure consistency and calculate the average range.
+5. Plot the range as a function of the launch angle.
 
+#### **Expected Results:**
+- The range will be highest at a launch angle of 45° (the optimal angle for maximum range in projectile motion).
+- As the angle approaches 90°, the range decreases, following the standard projectile motion pattern.
 
-#### **Graphical Analysis**
-![Range vs Angle Graph](https://upload.wikimedia.org/wikipedia/commons/2/28/Range_vs_angle.svg)
+#### **Graphical Representation:**
+![Projectile Motion at Different Angles](https://upload.wikimedia.org/wikipedia/commons/e/e9/Ball-projectile-motion-different-angles.svg)
 
-*Figure 2: Theoretical range of a projectile as a function of launch angle.*
+*Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).*
 
 ### Conclusion
 The investigation confirms the theoretical prediction that the range of a projectile follows a sinusoidal dependence on the angle of projection, with a maximum at 45°. This study is essential in applications such as ballistics, sports, and engineering.
