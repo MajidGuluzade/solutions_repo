@@ -70,7 +70,7 @@ To investigate how the range of a projectile changes with different launch angle
 #### **Graphical Representation:**
 ![Projectile Motion at Different Angles](Ball-projectile-motion-different-angles.png)
 
-*Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).*
+*Figure 2: Projectile motion at different launch angles (showing the range and path at varying angles).*
 
 #### Differential Equations:
 - The motion of a projectile can be described by solving the differential equations for horizontal and vertical motions simultaneously.
@@ -100,7 +100,7 @@ To investigate how the range of a projectile changes with different launch angle
 - **Sports**: Understanding projectile motion is vital for optimizing shots in sports like golf, soccer, and basketball.
 - **Engineering**: Accurate prediction of projectile paths is essential in fields like ballistics and artillery design.
 
-### 4. Implementation
+### Implementation
 
 #### Computational Tool:
 
@@ -135,8 +135,9 @@ plt.grid(True)
 plt.show()
 
 ```
-#### **Graphical Representation of Python script:**
-![alt text](imgg.png)
+![Graphical Representation of Python scrip](imgg.png)
+*Figure 3: Projectile motion at different launch angles (showing the range and path at varying angles).*
+
 
 ### Conclusion
 The investigation confirms the theoretical prediction that the range of a projectile follows a sinusoidal dependence on the angle of projection, with a maximum at 45°. This study is essential in applications such as ballistics, sports, and engineering.
