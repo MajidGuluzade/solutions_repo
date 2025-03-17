@@ -139,12 +139,11 @@ plt.savefig("forced_damped_poincare_section.png", dpi=300)
 plt.show()
 ```
 #### **Visual Representation**
-![alt text](forced_damped_pendulum_time_series.png)
+![Time Evolution Graph](forced_damped_pendulum_time_series.png)
 *Figure 1: Time Evolution Graph.*
 
-
+![Phase Space Diagram](forced_damped_pendulum_time_series-1.png)
 *Figure 2: Phase Space Diagram.*
 
-
-
+![Poincaré Section](forced_damped_poincare_section.png)
 *Figure 3: Poincaré Section.*
