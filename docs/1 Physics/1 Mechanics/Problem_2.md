@@ -1,11 +1,11 @@
 # Problem 2
-# Problem 2: Investigating the Dynamics of a Forced Damped Pendulum
+# Investigating the Dynamics of a Forced Damped Pendulum
 
-## 1. Motivation
+## Motivation
 
 The forced damped pendulum is a fascinating physical system exhibiting complex behavior due to the interplay of damping, restoring forces, and external driving forces. By incorporating periodic forcing, the system can display resonance, quasiperiodic motion, and even chaos. These behaviors have practical applications in mechanical engineering, climate systems, and nonlinear oscillators.
 
-## 2. Theoretical Foundation
+## Theoretical Foundation
 
 The motion of a forced damped pendulum is governed by the equation:
 
@@ -38,7 +38,7 @@ Resonance occurs when the external driving frequency matches the system’s natu
 
 At resonance, energy transfer is maximized, leading to large amplitude oscillations.
 
-## 3. Analysis of Dynamics
+## Analysis of Dynamics
 
 ### Effect of Parameters:
 1. **Damping Coefficient \( b \)**: High damping suppresses oscillations, while low damping allows sustained motion.
@@ -53,14 +53,14 @@ For certain parameter values, the pendulum enters a chaotic regime, characterize
 
 This is a hallmark of nonlinear dynamical systems.
 
-## 4. Practical Applications
+## Practical Applications
 
 The forced damped pendulum model applies to various real-world systems:
 - **Energy Harvesting**: Oscillators that extract energy from vibrations.
 - **Suspension Bridges**: Understanding how periodic forces can induce resonance.
 - **Oscillating Circuits**: Electrical analogs of mechanical driven oscillators.
 
-## 5. Implementation
+## Implementation
 
 ### Computational Model
 
