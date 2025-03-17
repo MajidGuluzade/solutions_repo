@@ -98,6 +98,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#further-investigation">Further Investigation</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -322,28 +326,34 @@ This equation shows that the range is maximized when <span class="arithmatex">\(
 <h3 id="4-implementation">4. Implementation</h3>
 <h4 id="computational-tool">Computational Tool:</h4>
 <p>To simulate projectile motion and calculate the range for different angles, we can use Python. Below is a simple Python code to calculate the range of a projectile for various launch angles.</p>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="constants">Constants</h1>
-<p>v0 = 30  # Initial velocity in m/s
-g = 9.81  # Gravitational acceleration in m/s^2</p>
-<h1 id="function-to-calculate-range">Function to calculate range</h1>
-<p>def calculate_range(v0, angle, g):
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+v0 = 30  # Initial velocity in m/s
+g = 9.81  # Gravitational acceleration in m/s^2
+
+# Function to calculate range
+def calculate_range(v0, angle, g):
     angle_rad = np.radians(angle)
     R = (v0**2 * np.sin(2 * angle_rad)) / g
-    return R</p>
-<h1 id="angles-of-projection">Angles of projection</h1>
-<p>angles = np.arange(1, 91, 1)  # From 1° to 90°</p>
-<h1 id="calculate-ranges-for-each-angle">Calculate ranges for each angle</h1>
-<p>ranges = [calculate_range(v0, angle, g) for angle in angles]</p>
-<h1 id="plotting-the-results">Plotting the results</h1>
-<p>plt.plot(angles, ranges)
+    return R
+
+# Angles of projection
+angles = np.arange(1, 91, 1)  # From 1° to 90°
+
+# Calculate ranges for each angle
+ranges = [calculate_range(v0, angle, g) for angle in angles]
+
+# Plotting the results
+plt.plot(angles, ranges)
 plt.title("Projectile Range vs Launch Angle")
 plt.xlabel("Launch Angle (degrees)")
 plt.ylabel("Range (meters)")
 plt.grid(True)
-plt.show()</p>
+plt.show()
+
+</code></pre>
 <h3 id="conclusion">Conclusion</h3>
 <p>The investigation confirms the theoretical prediction that the range of a projectile follows a sinusoidal dependence on the angle of projection, with a maximum at 45°. This study is essential in applications such as ballistics, sports, and engineering.</p>
 <h3 id="further-investigation">Further Investigation</h3>
