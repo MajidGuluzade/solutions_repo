@@ -48,6 +48,62 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#theory">Theory</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#visual-representation">Visual Representation</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#experimental-setup">Experimental Setup</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#objective">Objective:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#materials">Materials:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#procedure">Procedure:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#expected-results">Expected Results:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#graphical-representation">Graphical Representation:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#governing-equations">Governing Equations:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#differential-equations">Differential Equations:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-the-range">2. Analysis of the Range</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#relationship-between-range-and-launch-angle">Relationship Between Range and Launch Angle:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#impact-of-initial-velocity-and-gravity">Impact of Initial Velocity and Gravity:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-practical-applications">3. Practical Applications</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#air-resistance">Air Resistance:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#uneven-terrain">Uneven Terrain:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#real-world-applications">Real-World Applications:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-implementation">4. Implementation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#computational-tool">Computational Tool:</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -172,7 +228,7 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h1>
+<h3 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h3>
 <h3 id="introduction">Introduction</h3>
 <p>Projectile motion is a fundamental concept in physics, describing the motion of an object under the influence of gravity alone, after being projected with an initial velocity. One of the key characteristics of projectile motion is the range, which depends on the angle of projection. This investigation aims to analyze how the range varies as a function of the launch angle.</p>
 <h3 id="theory">Theory</h3>
@@ -235,8 +291,54 @@ This equation shows that the range is maximized when <span class="arithmatex">\(
 <li>As the angle approaches 90°, the range decreases, following the standard projectile motion pattern.</li>
 </ul>
 <h4 id="graphical-representation"><strong>Graphical Representation:</strong></h4>
-<p><img alt="Projectile Motion at Different Angles" src="../Ball-projectile-motion-different-angles.png"/>
-<em>Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).</em></p>
+<p><img alt="Projectile Motion at Different Angles" src="../Ball-projectile-motion-different-angles.png"/></p>
+<p><em>Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).</em></p>
+<h3 id="1-theoretical-foundation">1. Theoretical Foundation</h3>
+<h4 id="governing-equations">Governing Equations:</h4>
+<ul>
+<li>
+<p>Horizontal motion:
+  $$ x = v_0 \cos(\theta) \cdot t $$</p>
+</li>
+<li>
+<p>Vertical motion:
+  $$ y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2 $$</p>
+</li>
+</ul>
+<h4 id="differential-equations">Differential Equations:</h4>
+<ul>
+<li>The motion of a projectile can be described by solving the differential equations for horizontal and vertical motions simultaneously.</li>
+</ul>
+<h3 id="2-analysis-of-the-range">2. Analysis of the Range</h3>
+<h4 id="relationship-between-range-and-launch-angle">Relationship Between Range and Launch Angle:</h4>
+<ul>
+<li>The range <span class="arithmatex">\( R \)</span> of a projectile is maximized at <span class="arithmatex">\( 45^\circ \)</span>.</li>
+</ul>
+<h4 id="impact-of-initial-velocity-and-gravity">Impact of Initial Velocity and Gravity:</h4>
+<ul>
+<li><strong>Initial velocity</strong>: Increasing <span class="arithmatex">\( v_0 \)</span> increases the range.</li>
+<li><strong>Gravitational acceleration</strong>: Decreasing <span class="arithmatex">\( g \)</span> increases the range.</li>
+</ul>
+<h3 id="3-practical-applications">3. Practical Applications</h3>
+<h4 id="air-resistance">Air Resistance:</h4>
+<ul>
+<li>The drag force affects the motion and range.</li>
+<li><strong>Formula</strong>: 
+  $$ F_d = \frac{1}{2} C_d \rho A v^2 $$</li>
+</ul>
+<h4 id="uneven-terrain">Uneven Terrain:</h4>
+<ul>
+<li>When the projectile is launched on an inclined surface, the angle of launch must be adjusted accordingly.</li>
+</ul>
+<h4 id="real-world-applications">Real-World Applications:</h4>
+<ul>
+<li><strong>Sports</strong>: Understanding projectile motion is vital for optimizing shots in sports like golf, soccer, and basketball.</li>
+<li><strong>Engineering</strong>: Accurate prediction of projectile paths is essential in fields like ballistics and artillery design.</li>
+</ul>
+<h3 id="4-implementation">4. Implementation</h3>
+<h4 id="computational-tool">Computational Tool:</h4>
+<p>```python</p>
+<h1 id="simple-python-code-to-calculate-projectile-range-for-different-angles">Simple Python code to calculate projectile range for different angles</h1>
 <h3 id="conclusion">Conclusion</h3>
 <p>The investigation confirms the theoretical prediction that the range of a projectile follows a sinusoidal dependence on the angle of projection, with a maximum at 45°. This study is essential in applications such as ballistics, sports, and engineering.</p>
 <h3 id="further-investigation">Further Investigation</h3>
@@ -245,7 +347,6 @@ This equation shows that the range is maximized when <span class="arithmatex">\(
 <li>Analyzing projectile motion on inclined planes.</li>
 <li>Extending the study to different launch heights.</li>
 </ul>
-<p>This documentation provides a comprehensive understanding of how the angle of projection influences the range of a projectile.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
