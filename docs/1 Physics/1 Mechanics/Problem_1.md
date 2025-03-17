@@ -1,5 +1,5 @@
 # Problem 1
-# Investigating the Range as a Function of the Angle of Projection
+### Investigating the Range as a Function of the Angle of Projection
 
 ### Introduction
 Projectile motion is a fundamental concept in physics, describing the motion of an object under the influence of gravity alone, after being projected with an initial velocity. One of the key characteristics of projectile motion is the range, which depends on the angle of projection. This investigation aims to analyze how the range varies as a function of the launch angle.
@@ -69,7 +69,52 @@ To investigate how the range of a projectile changes with different launch angle
 
 #### **Graphical Representation:**
 ![Projectile Motion at Different Angles](Ball-projectile-motion-different-angles.png)
+
 *Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).*
+
+
+### 1. Theoretical Foundation
+
+#### Governing Equations:
+- Horizontal motion:
+  $$ x = v_0 \cos(\theta) \cdot t $$
+
+- Vertical motion:
+  $$ y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2 $$
+
+#### Differential Equations:
+- The motion of a projectile can be described by solving the differential equations for horizontal and vertical motions simultaneously.
+
+### 2. Analysis of the Range
+
+#### Relationship Between Range and Launch Angle:
+- The range \( R \) of a projectile is maximized at \( 45^\circ \).
+  
+#### Impact of Initial Velocity and Gravity:
+- **Initial velocity**: Increasing \( v_0 \) increases the range.
+- **Gravitational acceleration**: Decreasing \( g \) increases the range.
+
+### 3. Practical Applications
+
+#### Air Resistance:
+- The drag force affects the motion and range.
+- **Formula**: 
+  $$ F_d = \frac{1}{2} C_d \rho A v^2 $$
+
+#### Uneven Terrain:
+- When the projectile is launched on an inclined surface, the angle of launch must be adjusted accordingly.
+
+#### Real-World Applications:
+- **Sports**: Understanding projectile motion is vital for optimizing shots in sports like golf, soccer, and basketball.
+- **Engineering**: Accurate prediction of projectile paths is essential in fields like ballistics and artillery design.
+
+### 4. Implementation
+
+#### Computational Tool:
+
+```python
+# Simple Python code to calculate projectile range for different angles
+
 
 ### Conclusion
 The investigation confirms the theoretical prediction that the range of a projectile follows a sinusoidal dependence on the angle of projection, with a maximum at 45°. This study is essential in applications such as ballistics, sports, and engineering.
@@ -79,4 +124,4 @@ The investigation confirms the theoretical prediction that the range of a projec
 - Analyzing projectile motion on inclined planes.
 - Extending the study to different launch heights.
 
-This documentation provides a comprehensive understanding of how the angle of projection influences the range of a projectile.
+
