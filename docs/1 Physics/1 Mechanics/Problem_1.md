@@ -135,8 +135,8 @@ plt.grid(True)
 plt.show()
 
 ```
-
-
+#### **Graphical Representation of Python script:**
+![alt text](imgg.png)
 
 ### Conclusion
 The investigation confirms the theoretical prediction that the range of a projectile follows a sinusoidal dependence on the angle of projection, with a maximum at 45°. This study is essential in applications such as ballistics, sports, and engineering.
