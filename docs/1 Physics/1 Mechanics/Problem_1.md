@@ -46,6 +46,7 @@ This equation shows that the range is maximized when \( \sin(2\theta) \) is maxi
 ### Experimental Setup
 To experimentally verify the dependence of range on the angle of projection, the following setup can be used:
 1. **Materials:** A projectile launcher, a protractor, a measuring tape, a stopwatch, and a smooth launch surface.
+
 2. **Procedure:**
    - Set the launcher to a known initial velocity.
    - Adjust the angle of projection in increments (e.g., 10°, 20°, ..., 80°).
