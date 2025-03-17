@@ -84,7 +84,7 @@ To investigate how the range of a projectile changes with different launch angle
 - **Initial velocity**: Increasing \( v_0 \) increases the range.
 - **Gravitational acceleration**: Decreasing \( g \) increases the range.
 
-### Practical Applications
+### Practical Applications:
 
 #### Air Resistance:
 - The drag force affects the motion and range.
@@ -100,10 +100,7 @@ To investigate how the range of a projectile changes with different launch angle
 - **Sports**: Understanding projectile motion is vital for optimizing shots in sports like golf, soccer, and basketball.
 - **Engineering**: Accurate prediction of projectile paths is essential in fields like ballistics and artillery design.
 
-### Implementation
-
-#### Computational Tool:
-
+### Implementation:
 To simulate projectile motion and calculate the range for different angles, we can use Python. Below is a simple Python code to calculate the range of a projectile for various launch angles.
 
 ```python
