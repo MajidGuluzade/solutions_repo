@@ -132,8 +132,8 @@ plt.grid(True)
 plt.show()
 
 ```
-![Graphical Representation of Python scrip](imgg.png)
-*Figure 3: Projectile motion at different launch angles (showing the range and path at varying angles).*
+![Graphical Representation of Python scripT](imgg.png)
+*Figure 3: Graphical Representation of Python Script.*
 
 
 ### Conclusion
