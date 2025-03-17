@@ -75,8 +75,6 @@ To investigate how the range of a projectile changes with different launch angle
 #### Differential Equations:
 - The motion of a projectile can be described by solving the differential equations for horizontal and vertical motions simultaneously.
 
-### Analysis of the Range
-
 #### Relationship Between Range and Launch Angle:
 - The range \( R \) of a projectile is maximized at \( 45^\circ \).
 
