@@ -45,16 +45,20 @@ This equation shows that the range is maximized when \( \sin(2\theta) \) is maxi
 
 ### Experimental Setup
 To experimentally verify the dependence of range on the angle of projection, the following setup can be used:
-1. **Materials:** A projectile launcher, a protractor, a measuring tape, a stopwatch, and a smooth launch surface.
 
-2. **Procedure:**
-   - Set the launcher to a known initial velocity.
-   - Adjust the angle of projection in increments (e.g., 10°, 20°, ..., 80°).
-   - Measure and record the range for each angle.
-   - Repeat trials to ensure accuracy and take an average.
+#### **Materials:**
+- A **projectile launcher**
+- A **protractor**
+- A **measuring tape**
+- A **stopwatch**
+- A **smooth launch surface**
 
-### Expected Results and Graphical Representation
-The range should exhibit a symmetric variation with respect to 45°, reaching a maximum at that angle. A plot of range versus launch angle should resemble a parabola with its peak at 45°.
+#### **Procedure:**
+1. Set the launcher to a known initial velocity.
+2. Adjust the angle of projection in increments (e.g., 10°, 20°, ..., 80°).
+3. Measure and record the range for each angle.
+4. Repeat the trials to ensure accuracy and calculate the average range.
+
 
 #### **Graphical Analysis**
 ![Range vs Angle Graph](https://upload.wikimedia.org/wikipedia/commons/2/28/Range_vs_angle.svg)
