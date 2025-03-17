@@ -218,25 +218,28 @@
 </ul>
 <h2 id="computational-model">Computational Model</h2>
 <p>To verify Kepler's Third Law and simulate the relationship between the orbital period and orbital radius, we use the following Python script. The script calculates the orbital period for varying orbital radii and plots <span class="arithmatex">\( T^2 \)</span> against <span class="arithmatex">\( r^3 \)</span> to show that they are indeed proportional.</p>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<p>def orbital_period(radius, mass_central):
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+def orbital_period(radius, mass_central):
     G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
-    return 2 * np.pi * np.sqrt(radius**3 / (G * mass_central))</p>
-<h1 id="define-parameters">Define parameters</h1>
-<p>mass_earth = 5.972e24  # kg (Mass of Earth)
+    return 2 * np.pi * np.sqrt(radius**3 / (G * mass_central))
+
+# Define parameters
+mass_earth = 5.972e24  # kg (Mass of Earth)
 radii = np.linspace(7e6, 4.2e7, 100)  # Varying orbital radii (m)
-periods = [orbital_period(r, mass_earth) for r in radii]</p>
-<h1 id="verify-keplers-third-law">Verify Kepler's Third Law</h1>
-<p>plt.figure(figsize=(8, 6))
-plt.plot(radii<strong>3, periods</strong>2, label="<span class="arithmatex">\(T^2\)</span> vs <span class="arithmatex">\(r^3\)</span>")
-plt.xlabel("<span class="arithmatex">\(r^3\)</span> (m^3)")
-plt.ylabel("<span class="arithmatex">\(T^2\)</span> (s^2)")
+periods = [orbital_period(r, mass_earth) for r in radii]
+
+# Verify Kepler's Third Law
+plt.figure(figsize=(8, 6))
+plt.plot(radii**3, periods**2, label="$T^2$ vs $r^3$")
+plt.xlabel("$r^3$ (m^3)")
+plt.ylabel("$T^2$ (s^2)")
 plt.title("Verification of Kepler's Third Law")
 plt.legend()
 plt.grid()
-plt.show()</p>
+plt.show()
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
