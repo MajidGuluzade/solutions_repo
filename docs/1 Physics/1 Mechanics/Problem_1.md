@@ -39,8 +39,7 @@ Substituting \( T \):
 This equation shows that the range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( 2\theta = 90^\circ \), or \( \theta = 45^\circ \).
 
 #### **Visual Representation**
-![Projectile Motion Diagram](images/Ball-projectile-motion-different-angles.png)
-![alt text](Projectile_motion.png)
+![Projectile Motion Diagram](Projectile_motion.png)
 *Figure 1: Diagram showing projectile motion with different angles of projection.*
 
 
@@ -69,8 +68,7 @@ To investigate how the range of a projectile changes with different launch angle
 - As the angle approaches 90°, the range decreases, following the standard projectile motion pattern.
 
 #### **Graphical Representation:**
-![Projectile Motion at Different Angles](https://upload.wikimedia.org/wikipedia/commons/e/e9/Ball-projectile-motion-different-angles.svg)
-
+![Projectile Motion at Different Angles](Ball-projectile-motion-different-angles.png)
 *Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).*
 
 ### Conclusion
