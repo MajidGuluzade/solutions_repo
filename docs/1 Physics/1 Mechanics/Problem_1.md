@@ -72,34 +72,26 @@ To investigate how the range of a projectile changes with different launch angle
 
 *Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).*
 
-
-### 1. Theoretical Foundation
-
-#### Governing Equations:
-- Horizontal motion:
-  $$ x = v_0 \cos(\theta) \cdot t $$
-
-- Vertical motion:
-  $$ y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2 $$
-
 #### Differential Equations:
 - The motion of a projectile can be described by solving the differential equations for horizontal and vertical motions simultaneously.
 
-### 2. Analysis of the Range
+### Analysis of the Range
 
 #### Relationship Between Range and Launch Angle:
 - The range \( R \) of a projectile is maximized at \( 45^\circ \).
-  
+
 #### Impact of Initial Velocity and Gravity:
 - **Initial velocity**: Increasing \( v_0 \) increases the range.
 - **Gravitational acceleration**: Decreasing \( g \) increases the range.
 
-### 3. Practical Applications
+### Practical Applications
 
 #### Air Resistance:
 - The drag force affects the motion and range.
-- **Formula**: 
-  $$ F_d = \frac{1}{2} C_d \rho A v^2 $$
+- **Formula**:
+  $$
+  F_d = \frac{1}{2} C_d \rho A v^2
+  $$
 
 #### Uneven Terrain:
 - When the projectile is launched on an inclined surface, the angle of launch must be adjusted accordingly.
@@ -112,8 +104,36 @@ To investigate how the range of a projectile changes with different launch angle
 
 #### Computational Tool:
 
+To simulate projectile motion and calculate the range for different angles, we can use Python. Below is a simple Python code to calculate the range of a projectile for various launch angles.
+
 ```python
-# Simple Python code to calculate projectile range for different angles
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+v0 = 30  # Initial velocity in m/s
+g = 9.81  # Gravitational acceleration in m/s^2
+
+# Function to calculate range
+def calculate_range(v0, angle, g):
+    angle_rad = np.radians(angle)
+    R = (v0**2 * np.sin(2 * angle_rad)) / g
+    return R
+
+# Angles of projection
+angles = np.arange(1, 91, 1)  # From 1° to 90°
+
+# Calculate ranges for each angle
+ranges = [calculate_range(v0, angle, g) for angle in angles]
+
+# Plotting the results
+plt.plot(angles, ranges)
+plt.title("Projectile Range vs Launch Angle")
+plt.xlabel("Launch Angle (degrees)")
+plt.ylabel("Range (meters)")
+plt.grid(True)
+plt.show()
+
 
 
 ### Conclusion
