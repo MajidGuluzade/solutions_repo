@@ -70,17 +70,11 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#graphical-representation">Graphical Representation:</a>
 </li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#governing-equations">Governing Equations:</a>
-</li>
 <li class="toctree-l4"><a class="reference internal" href="#differential-equations">Differential Equations:</a>
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-the-range">2. Analysis of the Range</a>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-the-range">Analysis of the Range</a>
 <ul>
 <li class="toctree-l4"><a class="reference internal" href="#relationship-between-range-and-launch-angle">Relationship Between Range and Launch Angle:</a>
 </li>
@@ -88,7 +82,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#3-practical-applications">3. Practical Applications</a>
+<li class="toctree-l3"><a class="reference internal" href="#practical-applications">Practical Applications</a>
 <ul>
 <li class="toctree-l4"><a class="reference internal" href="#air-resistance">Air Resistance:</a>
 </li>
@@ -293,23 +287,11 @@ This equation shows that the range is maximized when <span class="arithmatex">\(
 <h4 id="graphical-representation"><strong>Graphical Representation:</strong></h4>
 <p><img alt="Projectile Motion at Different Angles" src="../Ball-projectile-motion-different-angles.png"/></p>
 <p><em>Figure 1: Projectile motion at different launch angles (showing the range and path at varying angles).</em></p>
-<h3 id="1-theoretical-foundation">1. Theoretical Foundation</h3>
-<h4 id="governing-equations">Governing Equations:</h4>
-<ul>
-<li>
-<p>Horizontal motion:
-  $$ x = v_0 \cos(\theta) \cdot t $$</p>
-</li>
-<li>
-<p>Vertical motion:
-  $$ y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2 $$</p>
-</li>
-</ul>
 <h4 id="differential-equations">Differential Equations:</h4>
 <ul>
 <li>The motion of a projectile can be described by solving the differential equations for horizontal and vertical motions simultaneously.</li>
 </ul>
-<h3 id="2-analysis-of-the-range">2. Analysis of the Range</h3>
+<h3 id="analysis-of-the-range">Analysis of the Range</h3>
 <h4 id="relationship-between-range-and-launch-angle">Relationship Between Range and Launch Angle:</h4>
 <ul>
 <li>The range <span class="arithmatex">\( R \)</span> of a projectile is maximized at <span class="arithmatex">\( 45^\circ \)</span>.</li>
@@ -319,12 +301,14 @@ This equation shows that the range is maximized when <span class="arithmatex">\(
 <li><strong>Initial velocity</strong>: Increasing <span class="arithmatex">\( v_0 \)</span> increases the range.</li>
 <li><strong>Gravitational acceleration</strong>: Decreasing <span class="arithmatex">\( g \)</span> increases the range.</li>
 </ul>
-<h3 id="3-practical-applications">3. Practical Applications</h3>
+<h3 id="practical-applications">Practical Applications</h3>
 <h4 id="air-resistance">Air Resistance:</h4>
 <ul>
 <li>The drag force affects the motion and range.</li>
-<li><strong>Formula</strong>: 
-  $$ F_d = \frac{1}{2} C_d \rho A v^2 $$</li>
+<li><strong>Formula</strong>:
+  $$
+  F_d = \frac{1}{2} C_d \rho A v^2
+  $$</li>
 </ul>
 <h4 id="uneven-terrain">Uneven Terrain:</h4>
 <ul>
@@ -337,8 +321,29 @@ This equation shows that the range is maximized when <span class="arithmatex">\(
 </ul>
 <h3 id="4-implementation">4. Implementation</h3>
 <h4 id="computational-tool">Computational Tool:</h4>
-<p>```python</p>
-<h1 id="simple-python-code-to-calculate-projectile-range-for-different-angles">Simple Python code to calculate projectile range for different angles</h1>
+<p>To simulate projectile motion and calculate the range for different angles, we can use Python. Below is a simple Python code to calculate the range of a projectile for various launch angles.</p>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="constants">Constants</h1>
+<p>v0 = 30  # Initial velocity in m/s
+g = 9.81  # Gravitational acceleration in m/s^2</p>
+<h1 id="function-to-calculate-range">Function to calculate range</h1>
+<p>def calculate_range(v0, angle, g):
+    angle_rad = np.radians(angle)
+    R = (v0**2 * np.sin(2 * angle_rad)) / g
+    return R</p>
+<h1 id="angles-of-projection">Angles of projection</h1>
+<p>angles = np.arange(1, 91, 1)  # From 1° to 90°</p>
+<h1 id="calculate-ranges-for-each-angle">Calculate ranges for each angle</h1>
+<p>ranges = [calculate_range(v0, angle, g) for angle in angles]</p>
+<h1 id="plotting-the-results">Plotting the results</h1>
+<p>plt.plot(angles, ranges)
+plt.title("Projectile Range vs Launch Angle")
+plt.xlabel("Launch Angle (degrees)")
+plt.ylabel("Range (meters)")
+plt.grid(True)
+plt.show()</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>The investigation confirms the theoretical prediction that the range of a projectile follows a sinusoidal dependence on the angle of projection, with a maximum at 45°. This study is essential in applications such as ballistics, sports, and engineering.</p>
 <h3 id="further-investigation">Further Investigation</h3>
