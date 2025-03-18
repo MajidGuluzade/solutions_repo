@@ -142,7 +142,7 @@ plt.show()
 ![Time Evolution Graph](forced_damped_pendulum_time_series.png)
 *Figure 1: Time Evolution Graph.*
 
-![Phase Space Diagram](forced_damped_pendulum_phase_space.png){: width="400px"}
+![Phase Space Diagram](forced_damped_pendulum_phase_space.png){: width="100px"}
 *Figure 2: Phase Space Diagram.*
 
 ![Poincaré Section](forced_damped_poincare_section.png)
