@@ -60,6 +60,7 @@ This result means that if you plot \( T^2 \) versus \( r^3 \) for any orbiting o
 Kepler's Third Law is crucial for several astronomical applications:
 
 ![Kepler’s third law of planetary motion from solar-system](<Visual solar system.png>)
+
 *Figure 1: Two notions of distance for the problem of learning Kepler’s third law of planetary motion from solar-system.*
 
 - **Planetary Orbital Analysis**: It allows astronomers to calculate the orbital period and radius of planets in the solar system or exoplanets in distant star systems.
@@ -81,15 +82,20 @@ def orbital_period(radius, mass_central):
 # Define parameters
 mass_earth = 5.972e24  # kg (Mass of Earth)
 radii = np.linspace(7e6, 4.2e7, 100)  # Varying orbital radii (m)
-periods = [orbital_period(r, mass_earth) for r in radii]
+radii_array = np.array(radii)  # Convert radii to a NumPy array
+periods = np.array([orbital_period(r, mass_earth) for r in radii_array])  # Convert periods to NumPy array
 
 # Verify Kepler's Third Law
 plt.figure(figsize=(8, 6))
-plt.plot(radii**3, periods**2, label="$T^2$ vs $r^3$")
+plt.plot(radii_array**3, periods**2, label="$T^2$ vs $r^3$")
 plt.xlabel("$r^3$ (m^3)")
 plt.ylabel("$T^2$ (s^2)")
 plt.title("Verification of Kepler's Third Law")
 plt.legend()
 plt.grid()
+plt.savefig("verification_of_Kepler's_Third_Law.png", dpi=300)
 plt.show()
 ```
+#### **Visual Representation**
+![Verification of Kepler's Third Law](verification_of_Kepler's_Third_Law.png)
+*Figure 2: Verification of Kepler's Third Law.*
