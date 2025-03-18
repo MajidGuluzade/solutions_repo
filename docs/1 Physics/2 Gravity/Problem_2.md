@@ -89,3 +89,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
+
+#### **Visual Representation**
+![alt text](Cosmic_Velocities_for_Various_Celestial_Bodies.png)
+*Figure 1: Cosmic Velocities for Various Celestial Bodies.*
