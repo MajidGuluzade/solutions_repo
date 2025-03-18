@@ -59,10 +59,6 @@ This result means that if you plot \( T^2 \) versus \( r^3 \) for any orbiting o
 ## Applications in Astronomy
 Kepler's Third Law is crucial for several astronomical applications:
 
-![Kepler’s third law of planetary motion from solar-system](<Visual solar system.png>)
-
-*Figure 1: Two notions of distance for the problem of learning Kepler’s third law of planetary motion from solar-system.*
-
 - **Planetary Orbital Analysis**: It allows astronomers to calculate the orbital period and radius of planets in the solar system or exoplanets in distant star systems.
 - **Satellite Orbit Calculations**: For artificial satellites, this law helps to predict their orbital period given the radius from the Earth's center.
 - **Exoplanet Detection**: When a planet passes in front of its host star (a transit event), astronomers can measure the time between transits to estimate the orbital period. From there, the orbital radius can be inferred using Kepler's Third Law.
@@ -70,6 +66,9 @@ Kepler's Third Law is crucial for several astronomical applications:
 
 ## Computational Model
 To verify Kepler's Third Law and simulate the relationship between the orbital period and orbital radius, we use the following Python script. The script calculates the orbital period for varying orbital radii and plots \( T^2 \) against \( r^3 \) to show that they are indeed proportional.
+![Kepler’s third law of planetary motion from solar-system](<Visual solar system.png>)
+
+*Figure 1: Two notions of distance for the problem of learning Kepler’s third law of planetary motion from solar-system.*
 
 ```python
 import numpy as np
