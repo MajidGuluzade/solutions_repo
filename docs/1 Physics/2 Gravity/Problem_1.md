@@ -98,7 +98,8 @@ plt.show()
 #### **Visual Representation**
 ![Verification of Kepler's Third Law](verification_of_Kepler's_Third_Law.png)
 *Figure 2: Verification of Kepler's Third Law.*
- ## Conclusion
+
+## Conclusion
 Kepler’s Third Law establishes a crucial relationship between the orbital period and the orbital radius of a celestial body. The derivation confirms that the square of the orbital period (\( T^2 \)) is directly proportional to the cube of the orbital radius (\( r^3 \)), providing a foundational principle in celestial mechanics. 
 
 By applying this law, we gain valuable insights into planetary motion, satellite orbits, and exoplanet detection. The computational model successfully verifies this relationship through numerical simulation and graphical representation, reinforcing the theoretical predictions with empirical validation. This demonstrates the law’s practical significance in astronomy and space exploration.

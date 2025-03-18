@@ -93,6 +93,7 @@ plt.show()
 #### **Visual Representation**
 ![alt text](Cosmic_Velocities_for_Various_Celestial_Bodies.png)
 *Figure 1: Cosmic Velocities for Various Celestial Bodies.*
+
 ## Conclusion  
 
 The concept of cosmic velocities is crucial for understanding orbital mechanics and space travel. The **first cosmic velocity** allows an object to stay in orbit, the **second cosmic velocity** ensures it escapes a planet’s gravitational field, and the **third cosmic velocity** enables it to leave a star system entirely. Our calculations for Earth, Mars, and Jupiter show that these velocities vary significantly based on the mass and radius of the celestial body. The results highlight the challenges of space exploration, particularly in achieving escape velocity for interplanetary and interstellar missions.
