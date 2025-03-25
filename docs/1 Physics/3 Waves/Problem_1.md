@@ -82,7 +82,7 @@ plt.title(f'Interference Pattern for {num_sources}-sided Polygon')
 plt.show()
 ```
 ![alt text](image.png)
-*Figure 3: The Interference Pattern.*
+*Figure 1: The Interference Pattern of Waves from Three Sources .*
 ### Explanation of Heatmap Script
 
 The script generates a 2D heatmap showing the interference pattern of waves from three sources arranged in a triangle. The pattern displays alternating regions of high (red) and low (blue) wave displacement due to constructive and destructive interference, with the sources marked as black dots.
@@ -105,6 +105,11 @@ ani = animation.FuncAnimation(fig, update, frames=100, interval=50, blit=False)
 plt.show()
 ```
 ![Wave Interference Animation](wave_animation.gif)
+*Figure 2: Wave Interference Animation .*
+
+### Animated Wave Evolution
+
+This script creates an animated visualization of wave interference from three sources. It uses `matplotlib.animation.FuncAnimation` to update the wave displacement over time. The `update` function recalculates the interference pattern at each frame, producing a dynamic visualization of wave propagation. The color map (`RdBu_r`) highlights constructive (red) and destructive (blue) interference regions.
 
 
 ## Analysis
