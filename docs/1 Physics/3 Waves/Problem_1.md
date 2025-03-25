@@ -107,18 +107,10 @@ plt.show()
 ![Wave Interference Animation](wave_animation.gif)
 *Figure 2: Wave Interference Animation .*
 
-### Animated Wave Evolution
+## Analysis
 
 This script creates an animated visualization of wave interference from three sources. It uses `matplotlib.animation.FuncAnimation` to update the wave displacement over time. The `update` function recalculates the interference pattern at each frame, producing a dynamic visualization of wave propagation. The color map (`RdBu_r`) highlights constructive (red) and destructive (blue) interference regions.
 
-
-## Analysis
-- The contour plot visualizes constructive (bright) and destructive (dark) interference regions.
-- The 3D surface plot provides a better spatial understanding of displacement variations.
-- The animated plot shows how waves evolve dynamically over time.
-- Increasing `num_sources` modifies the pattern based on the polygon shape.
-- Regions of maximal constructive interference correspond to points where multiple waves reinforce each other in phase.
-- Regions of destructive interference form where waves cancel each other out due to phase differences.
 
 ## Considerations
 
