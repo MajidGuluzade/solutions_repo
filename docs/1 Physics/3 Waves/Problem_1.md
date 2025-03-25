@@ -37,70 +37,7 @@ Analyze the interference patterns formed on a water surface due to the superposi
 
 ## Implementation
 The following Python script simulates and visualizes the interference pattern using `numpy` and `matplotlib`.
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Parameters
-A = 1  # Amplitude
-wavelength = 1  # Wavelength
-k = 2 * np.pi / wavelength  # Wave number
-omega = 2 * np.pi  # Angular frequency
-phi_0 = 0  # Initial phase
-num_sources = 3  # Number of sources (triangle)
-radius = 2  # Radius of the polygon
-
-def wave_displacement(x, y, t, sources):
-    displacement = np.zeros_like(x)
-    for (x_s, y_s) in sources:
-        r = np.sqrt((x - x_s)**2 + (y - y_s)**2)
-        displacement += A * np.cos(k * r - omega * t + phi_0)
-    return displacement
-
-# Define the polygon vertices
-angles = np.linspace(0, 2 * np.pi, num_sources, endpoint=False)
-sources = [(radius * np.cos(a), radius * np.sin(a)) for a in angles]
-
-# Create a grid
-x = np.linspace(-3, 3, 200)
-y = np.linspace(-3, 3, 200)
-X, Y = np.meshgrid(x, y)
-t = 0  # Snapshot at t=0
-
-# Compute wave interference
-Z = wave_displacement(X, Y, t, sources)
-
-# Plot the interference pattern
-plt.figure(figsize=(8, 6))
-plt.contourf(X, Y, Z, levels=50, cmap='RdBu_r')
-plt.colorbar(label='Wave Displacement')
-plt.scatter(*zip(*sources), color='black', marker='o', label='Wave Sources')
-plt.legend()
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title(f'Interference Pattern for {num_sources}-sided Polygon')
-plt.show()
-```
-
-## Additional Visualizations
-To enhance understanding, we generate:
-- **3D Surface Plot:** Provides a height-map representation of wave displacement.
-- **Animated Wave Evolution:** Shows real-time changes in the interference pattern.
-
-### 3D Surface Plot
-```python
-from mpl_toolkits.mplot3d import Axes3D
-
-fig = plt.figure(figsize=(10, 6))
-ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(X, Y, Z, cmap='coolwarm')
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Displacement')
-ax.set_title('3D Wave Interference Pattern')
-plt.show()
-```
+[Open the Jupyter Notebook on GitHub](https://github.com/MajidGuluzade/solutions_repo/blob/main/P1.ipynb)
 
 ### Animated Wave Evolution
 ```python
