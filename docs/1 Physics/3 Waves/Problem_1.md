@@ -106,6 +106,7 @@ plt.show()
 ```
 ![Wave Interference Animation](wave_animation.gif)
 
+
 ## Analysis
 - The contour plot visualizes constructive (bright) and destructive (dark) interference regions.
 - The 3D surface plot provides a better spatial understanding of displacement variations.
