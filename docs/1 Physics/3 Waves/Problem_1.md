@@ -111,14 +111,30 @@ plt.show()
 
 This script creates an animated visualization of wave interference from three sources. It uses `matplotlib.animation.FuncAnimation` to update the wave displacement over time. The `update` function recalculates the interference pattern at each frame, producing a dynamic visualization of wave propagation. The color map (`RdBu_r`) highlights constructive (red) and destructive (blue) interference regions.
 
-
 ## Considerations
 
 When analyzing the interference patterns in water waves, several important considerations and assumptions are made to simplify the model. These considerations ensure that the mathematical model is feasible and that the results are easier to interpret. However, real-world conditions may introduce additional complexities.
+- **Same Amplitude, Wavelength, and Frequency**:  
+    In this model, it is assumed that all the sources emit waves with the **same amplitude**, **wavelength**, and **frequency**. This uniformity ensures that the waves are similar in behavior, and that the resulting interference patterns are driven solely by the **positions** and **phases** of the sources.
 
-- **Same Amplitude, Wavelength, and Frequency**: 
-    - In this model, it is assumed that all the sources emit waves with the same amplitude, wavelength, and frequency. This uniformity ensures that the waves are similar in behavior and that the resulting interference patterns are driven solely by the positions and phases of the sources.
-    - In real-world scenarios, sources may emit waves with different amplitudes, wavelengths, or frequencies, leading to more complex interference patterns that could require more advanced techniques to analyze.
+    The wave displacement from each source can be written as:
+
+    $$
+    \Psi(x, t) = A \sin(kx - \omega t + \phi)
+    $$
+
+    Where:  
+    - \( A \) is the **amplitude** of the wave (same for all sources).  
+    - \( k = \frac{2\pi}{\lambda} \) is the **wave number**, related to the **wavelength** \( \lambda \).  
+    - \( \omega = 2\pi f \) is the **angular frequency**, related to the **frequency** \( f \).  
+    - \( \phi \) is the **phase shift** of the wave.
+
+    Since all sources have the **same amplitude**, **wavelength**, and **frequency**, the waves produced by these sources will behave similarly, but the resulting **interference pattern** will depend on how the sources are arranged in space and the phase relationships between the waves.
+
+---
+
+- **Real-World Scenarios**:  
+    In real-world scenarios, sources may emit waves with **different amplitudes**, **wavelengths**, or **frequencies**, leading to more **complex interference patterns**. These patterns could require more **advanced techniques** to analyze, including considering the **frequency spectrum** and **phase differences** between sources.
 
 - **Coherence of Waves**: 
     - The waves are assumed to be **coherent**, meaning that they maintain a constant phase difference over time. This coherence is critical in producing stable and predictable interference patterns, such as the formation of constructive and destructive interference regions.
