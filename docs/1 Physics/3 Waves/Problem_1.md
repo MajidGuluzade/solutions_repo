@@ -199,6 +199,8 @@ HTML(ani.to_jshtml())
 ```
 ![Coherence of Waves](wave_interference_slow.gif)
 *Figure 3: Coherence of Waves .*
+![Coherence of Waves](Screen Shot 2025-03-25 at 3.33.29 PM.png)
+*Figure 3: Coherence of Waves .* 
 
 - **Idealized Water Surface**: 
     - The simulation assumes an **idealized water surface**, meaning that there are no external disturbances such as wind, obstacles, or changes in water properties. This simplified assumption makes it easier to visualize and understand the core concept of wave interference.
