@@ -114,6 +114,7 @@ This script creates an animated visualization of wave interference from three so
 ## Considerations
 
 When analyzing the interference patterns in water waves, several important considerations and assumptions are made to simplify the model. These considerations ensure that the mathematical model is feasible and that the results are easier to interpret. However, real-world conditions may introduce additional complexities.
+
 - **Same Amplitude, Wavelength, and Frequency**:  
     In this model, it is assumed that all the sources emit waves with the **same amplitude**, **wavelength**, and **frequency**. This uniformity ensures that the waves behave similarly and that the resulting interference patterns are driven solely by the **positions** and **phases** of the sources.
 
