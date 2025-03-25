@@ -131,6 +131,59 @@ When analyzing the interference patterns in water waves, several important consi
 - **Coherence of Waves**: 
     - The waves are assumed to be **coherent**, meaning that they maintain a constant phase difference over time. This coherence is critical in producing stable and predictable interference patterns, such as the formation of constructive and destructive interference regions.
     - In practice, maintaining coherence over long periods or across large distances can be challenging due to environmental factors like temperature changes, fluid motion, or external disturbances.
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
+# Define wave parameters
+wavelength = 1.0  # Wavelength of the waves
+k = 2 * np.pi / wavelength  # Wave number
+omega = 2 * np.pi * 0.1  # Reduced angular frequency (slower speed)
+phase_shift = 0  # Constant phase shift for coherence
+
+# Define source positions
+sources = np.array([[0, 0], [3, 0], [1.5, 2.5]])  # Three sources forming a triangle
+
+# Define grid for visualization
+x = np.linspace(-2, 5, 300)
+y = np.linspace(-2, 5, 300)
+X, Y = np.meshgrid(x, y)
+
+def wave_displacement(X, Y, t, sources):
+    """Computes the wave displacement at each point on the grid."""
+    displacement = np.zeros_like(X, dtype=np.float64)
+    for source in sources:
+        r = np.sqrt((X - source[0])**2 + (Y - source[1])**2)  # Distance from source
+        displacement += np.sin(k * r - omega * t + phase_shift)  # Coherent waves
+    return displacement
+
+# Create figure
+fig, ax = plt.subplots(figsize=(8, 6))
+contour = ax.contourf(X, Y, wave_displacement(X, Y, 0, sources), levels=50, cmap='RdBu_r')
+plt.colorbar(contour)
+ax.scatter(sources[:, 0], sources[:, 1], color='black', marker='o', label="Wave Sources")
+ax.set_title("Slow Motion Coherent Wave Interference")
+ax.legend()
+
+# Update function for animation
+def update(frame):
+    ax.clear()
+    contour = ax.contourf(X, Y, wave_displacement(X, Y, frame * 0.2, sources), levels=50, cmap='RdBu_r')
+    ax.scatter(sources[:, 0], sources[:, 1], color='black', marker='o')  # Replot sources
+    ax.set_title("Slow Motion Coherent Wave Interference")
+    return contour.collections
+
+# Create animation (slow motion effect with interval)
+ani = animation.FuncAnimation(fig, update, frames=200, interval=100, blit=False)
+
+# Display animation in Jupyter Notebook
+from IPython.display import HTML
+plt.close(fig)  # Prevents static plot display
+HTML(ani.to_jshtml())
+```
+![Coherence of Waves](wave_interference_slow.gif)
+*Figure 3: Coherence of Waves .*
 
 - **Idealized Water Surface**: 
     - The simulation assumes an **idealized water surface**, meaning that there are no external disturbances such as wind, obstacles, or changes in water properties. This simplified assumption makes it easier to visualize and understand the core concept of wave interference.
