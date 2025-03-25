@@ -131,8 +131,6 @@ When analyzing the interference patterns in water waves, several important consi
 
     Since all sources have the **same amplitude**, **wavelength**, and **frequency**, the waves produced by these sources will behave similarly, but the resulting **interference pattern** will depend on how the sources are arranged in space and the phase relationships between the waves.
 
----
-
 - **Real-World Scenarios**:  
     In real-world scenarios, sources may emit waves with **different amplitudes**, **wavelengths**, or **frequencies**, leading to more **complex interference patterns**. These patterns could require more **advanced techniques** to analyze, including considering the **frequency spectrum** and **phase differences** between sources.
 
