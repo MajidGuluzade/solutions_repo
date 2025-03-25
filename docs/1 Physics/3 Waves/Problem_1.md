@@ -104,6 +104,7 @@ def update(frame):
 ani = animation.FuncAnimation(fig, update, frames=100, interval=50, blit=False)
 plt.show()
 ```
+![Wave Interference Animation](wave_animation.gif)
 
 ## Analysis
 - The contour plot visualizes constructive (bright) and destructive (dark) interference regions.
