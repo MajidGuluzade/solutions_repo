@@ -249,7 +249,7 @@ plt.title(f'Interference Pattern for {num_sources}-sided Polygon')
 plt.show()
 </code></pre>
 <p><img alt="alt text" src="../image.png"/>
-<em>Figure 3: The Interference Pattern.</em></p>
+<em>Figure 1: The Interference Pattern of Waves from Three Sources .</em></p>
 <h3 id="explanation-of-heatmap-script">Explanation of Heatmap Script</h3>
 <p>The script generates a 2D heatmap showing the interference pattern of waves from three sources arranged in a triangle. The pattern displays alternating regions of high (red) and low (blue) wave displacement due to constructive and destructive interference, with the sources marked as black dots.</p>
 <h3 id="animated-wave-evolution">Animated Wave Evolution</h3>
@@ -268,7 +268,10 @@ def update(frame):
 ani = animation.FuncAnimation(fig, update, frames=100, interval=50, blit=False)
 plt.show()
 </code></pre>
-<p><img alt="Wave Interference Animation" src="../wave_animation.gif"/></p>
+<p><img alt="Wave Interference Animation" src="../wave_animation.gif"/>
+<em>Figure 2: Wave Interference Animation .</em></p>
+<h3 id="animated-wave-evolution_1">Animated Wave Evolution</h3>
+<p>This script creates an animated visualization of wave interference from three sources. It uses <code>matplotlib.animation.FuncAnimation</code> to update the wave displacement over time. The <code>update</code> function recalculates the interference pattern at each frame, producing a dynamic visualization of wave propagation. The color map (<code>RdBu_r</code>) highlights constructive (red) and destructive (blue) interference regions.</p>
 <h2 id="analysis">Analysis</h2>
 <ul>
 <li>The contour plot visualizes constructive (bright) and destructive (dark) interference regions.</li>
