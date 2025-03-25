@@ -64,11 +64,29 @@ Kepler's Third Law is crucial for several astronomical applications:
 - **Exoplanet Detection**: When a planet passes in front of its host star (a transit event), astronomers can measure the time between transits to estimate the orbital period. From there, the orbital radius can be inferred using Kepler's Third Law.
 - **Gravitational Dynamics**: The relationship is also used in understanding binary star systems, where the orbital period of the stars can help determine the system's mass and size.
 
-## Computational Model
-To verify Kepler's Third Law and simulate the relationship between the orbital period and orbital radius, we use the following Python script. The script calculates the orbital period for varying orbital radii and plots \( T^2 \) against \( r^3 \) to show that they are indeed proportional.
 ![Kepler’s third law of planetary motion from solar-system](<Visual solar system.png>)
 
 *Figure 1: Two notions of distance for the problem of learning Kepler’s third law of planetary motion from solar-system.*
+
+### Explanation of Kepler’s Third Law and Model Representation
+
+This section presents the numerical data, background theory, and the discovered model for **Kepler’s third law of planetary motion**, which describes the relationship between the orbital period of a planet and its distance from the Sun. The data used in the model includes the following parameters for each planet: the mass of the Sun (**m₁**), the mass of the planet (**m₂**), the distance of the planet from the Sun (**d**), and the orbital period of the planet (**p**).
+
+The background theory relies on **Newton’s laws of motion**, which explain the centrifugal force, gravitational force, and equilibrium conditions. These laws are fundamental in deriving the relationship between the orbital period and the planet's distance from the Sun. By applying these principles, the 4-tuples (**m₁**, **m₂**, **d**, **p**) are projected into the new variables (**m₁ + m₂**, **d**, **p**). The relationship is visualized through two manifolds, which represent the solutions derived from the background theory and the discovered model.
+
+---
+
+The numerical data, background theory, and a discovered model are depicted for **Kepler’s third law of planetary motion**, giving the orbital period of a planet in the solar system. The data consists of measurements (**m₁**, **m₂**, **d**, **p**) of the mass of the sun **m₁**, the orbital period **p**, the mass **m₂** for each planet, and its distance **d** from the sun. The background theory amounts to **Newton’s laws of motion**, i.e., the formulae for centrifugal force, gravitational force, and equilibrium conditions.
+
+The 4-tuples (**m₁**, **m₂**, **d**, **p**) are projected into (**m₁ + m₂**, **d**, **p**).
+
+- The **blue manifold** represents solutions of **fB**, which is the function derivable from the background-theory axioms that represents the variable of interest.  
+- The **gray manifold** represents solutions of the discovered model **f**.
+
+The double arrows indicate the distances **β(f)** and **ε(f)**.
+
+## Computational Model
+To verify Kepler's Third Law and simulate the relationship between the orbital period and orbital radius, we use the following Python script. The script calculates the orbital period for varying orbital radii and plots \( T^2 \) against \( r^3 \) to show that they are indeed proportional.
 
 ```python
 import numpy as np
