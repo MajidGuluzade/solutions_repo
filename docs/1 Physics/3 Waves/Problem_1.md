@@ -82,6 +82,11 @@ plt.title(f'Interference Pattern for {num_sources}-sided Polygon')
 plt.show()
 ```
 ![alt text](image.png)
+*Figure 3: The Interference Pattern.*
+### Explanation of Heatmap Script
+
+The script generates a 2D heatmap showing the interference pattern of waves from three sources arranged in a triangle. The pattern displays alternating regions of high (red) and low (blue) wave displacement due to constructive and destructive interference, with the sources marked as black dots.
+
 ### Animated Wave Evolution
 ```python
 import matplotlib.animation as animation
