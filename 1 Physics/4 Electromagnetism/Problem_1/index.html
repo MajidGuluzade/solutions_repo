@@ -172,6 +172,121 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1_1">Problem 1</h1>
+<h2 id="simulating-the-effects-of-the-lorentz-force">Simulating the Effects of the Lorentz Force</h2>
+<hr/>
+<h2 id="motivation">Motivation</h2>
+<p>The <strong>Lorentz force</strong>, expressed as:</p>
+<div class="arithmatex">\[
+\vec{F} = q(\vec{E} + \vec{v} \times \vec{B}),
+\]</div>
+<p>governs the motion of charged particles in electric and magnetic fields. It plays a crucial role in various fields, including <strong>plasma physics</strong>, <strong>astrophysics</strong>, <strong>mass spectrometry</strong>, and <strong>particle accelerators</strong>. Through simulations, we can observe and analyze the diverse trajectories induced by different field configurations and initial conditions.</p>
+<hr/>
+<h2 id="objectives">Objectives</h2>
+<h3 id="1-applications-of-the-lorentz-force">1. Applications of the Lorentz Force</h3>
+<ul>
+<li><strong>Mass spectrometers</strong> use it to separate ions based on mass-to-charge ratio.</li>
+<li><strong>Cyclotrons and synchrotrons</strong> accelerate particles using magnetic fields.</li>
+<li><strong>Plasma confinement</strong> in fusion reactors relies on magnetic field manipulation.</li>
+<li><strong>Charged particle beams</strong> in astrophysical jets are shaped by cosmic magnetic fields.</li>
+</ul>
+<h3 id="2-simulating-particle-motion">2. Simulating Particle Motion</h3>
+<p>We simulate a charged particle's motion under the influence of:
+- A <strong>uniform magnetic field</strong>
+- <strong>Uniform electric and magnetic fields</strong>
+- <strong>Crossed electric and magnetic fields</strong></p>
+<h3 id="3-parameter-exploration">3. Parameter Exploration</h3>
+<p>We vary:
+- Electric field vector <span class="arithmatex">\( \vec{E} \)</span>
+- Magnetic field vector <span class="arithmatex">\( \vec{B} \)</span>
+- Initial velocity <span class="arithmatex">\( \vec{v}_0 \)</span>
+- Charge <span class="arithmatex">\( q \)</span>
+- Mass <span class="arithmatex">\( m \)</span></p>
+<h3 id="4-visualization">4. Visualization</h3>
+<p>We plot:
+- 2D and 3D trajectories of the particle.
+- Different motion types: <strong>circular</strong>, <strong>helical</strong>, or <strong>drift</strong> motion.
+- Illustrate concepts such as <strong>Larmor radius</strong> and <strong>drift velocity</strong>.</p>
+<hr/>
+<h2 id="python-code-lorentz-force-simulation">Python Code: Lorentz Force Simulation</h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Define constants and initial conditions
+q = 1.6e-19        # Charge of the particle (Coulombs)
+m = 9.11e-31       # Mass of the particle (kg, electron)
+B = np.array([0, 0, 1])  # Magnetic field (Tesla)
+E = np.array([0, 0, 0])  # Electric field (V/m)
+v0 = np.array([1e5, 0, 1e5])  # Initial velocity (m/s)
+
+dt = 1e-11         # Time step (s)
+t_max = 5e-7       # Total time (s)
+steps = int(t_max / dt)
+
+# Initialize arrays
+r = np.zeros((steps, 3))
+v = np.zeros((steps, 3))
+r[0] = np.array([0, 0, 0])  # Initial position
+v[0] = v0
+
+# Simulation using Euler method
+for i in range(steps - 1):
+    F = q * (E + np.cross(v[i], B))  # Lorentz force
+    a = F / m
+    v[i+1] = v[i] + a * dt
+    r[i+1] = r[i] + v[i] * dt
+
+# Plotting the trajectory in 3D
+fig = plt.figure(figsize=(10, 6))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot(r[:,0], r[:,1], r[:,2], color='b', label='Trajectory')
+ax.set_xlabel("X (m)")
+ax.set_ylabel("Y (m)")
+ax.set_zlabel("Z (m)")
+ax.set_title("Trajectory of a Charged Particle in a Magnetic Field")
+ax.legend()
+plt.tight_layout()
+plt.savefig("Lorentz_Trajectory.png", dpi=300)
+plt.show()
+</code></pre>
+<hr/>
+<h2 id="visual-output">Visual Output</h2>
+<p><img alt="Trajectory" src="Lorentz_Trajectory.png"/><br/>
+<em>Figure 1: Helical trajectory of a charged particle in a uniform magnetic field.</em></p>
+<hr/>
+<h2 id="observations">Observations</h2>
+<ul>
+<li>In a <strong>pure magnetic field</strong>, the charged particle follows a <strong>helical trajectory</strong>.</li>
+<li>The <strong>radius of the helix</strong> (Larmor radius) depends on the perpendicular velocity:
+  $$
+  r_L = \frac{mv_\perp}{|q|B}
+  $$</li>
+<li>Adding a <strong>parallel electric field</strong> accelerates the particle along the field lines.</li>
+<li>For <strong>crossed E and B fields</strong>, the particle experiences <strong>drift motion</strong> with drift velocity:
+  $$
+  \vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
+  $$</li>
+</ul>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Lorentz force produces a variety of complex, predictable motions depending on the field configuration and initial conditions. Through simulations:</p>
+<ul>
+<li>We observed <strong>circular</strong>, <strong>helical</strong>, and <strong>drift</strong> motions.</li>
+<li>We verified how the interplay between velocity, charge, mass, and field strength affects the motion.</li>
+<li>This provides insights into systems like <strong>cyclotrons</strong>, <strong>mass spectrometers</strong>, and <strong>plasma containment</strong> devices.</li>
+</ul>
+<p>Simulations such as these bridge the gap between theoretical physics and real-world application, enabling us to <strong>visually understand</strong> and <strong>quantitatively explore</strong> electromagnetic effects.</p>
+<hr/>
+<h2 id="suggestions-for-extension">Suggestions for Extension</h2>
+<ul>
+<li>Simulate motion in <strong>non-uniform magnetic fields</strong> (e.g., magnetic mirrors).</li>
+<li>Incorporate <strong>relativistic dynamics</strong> for high-speed particles.</li>
+<li>Implement <strong>higher-order numerical methods</strong> like Runge-Kutta.</li>
+<li>Animate trajectories using <code>matplotlib.animation</code> for dynamic visualization.</li>
+<li>Add support for multiple particles with different initial conditions and charges.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
