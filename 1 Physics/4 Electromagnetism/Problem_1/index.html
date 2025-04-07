@@ -72,6 +72,8 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#simulating-the-effects-of-the-lorentz-force">Simulating the Effects of the Lorentz Force</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,37 +174,55 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<h1 id="problem-1_1">Problem 1</h1>
 <h2 id="simulating-the-effects-of-the-lorentz-force">Simulating the Effects of the Lorentz Force</h2>
 <hr/>
-<h2 id="motivation">Motivation</h2>
-<p>The <strong>Lorentz force</strong>, expressed as:</p>
+<h1 id="motivation">Motivation</h1>
+<p>The <strong>Lorentz force</strong>, mathematically defined as:</p>
 <div class="arithmatex">\[
 \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}),
 \]</div>
-<p>governs the motion of charged particles in electric and magnetic fields. It plays a crucial role in various fields, including <strong>plasma physics</strong>, <strong>astrophysics</strong>, <strong>mass spectrometry</strong>, and <strong>particle accelerators</strong>. Through simulations, we can observe and analyze the diverse trajectories induced by different field configurations and initial conditions.</p>
-<hr/>
-<h2 id="objectives">Objectives</h2>
-<h3 id="1-applications-of-the-lorentz-force">1. Applications of the Lorentz Force</h3>
+<p>governs the motion of <strong>charged particles</strong> in the presence of <strong>electric fields</strong> (<span class="arithmatex">\( \vec{E} \)</span>) and <strong>magnetic fields</strong> (<span class="arithmatex">\( \vec{B} \)</span>). This fundamental equation encapsulates the combined influence of electric and magnetic forces acting on a particle with charge <span class="arithmatex">\( q \)</span> and velocity <span class="arithmatex">\( \vec{v} \)</span>. The electric field component (<span class="arithmatex">\( q\vec{E} \)</span>) exerts a force aligned with <span class="arithmatex">\( \vec{E} \)</span>, while the magnetic field component (<span class="arithmatex">\( q\vec{v} \times \vec{B} \)</span>) introduces a force perpendicular to both the particle’s velocity and the magnetic field, often resulting in complex, curved trajectories. This interplay is essential to understanding and predicting the behavior of charged particles across a wide range of physical systems.</p>
+<p>The Lorentz force is a cornerstone in numerous scientific and technological domains, driving advancements and discoveries in:</p>
 <ul>
-<li><strong>Mass spectrometers</strong> use it to separate ions based on mass-to-charge ratio.</li>
-<li><strong>Cyclotrons and synchrotrons</strong> accelerate particles using magnetic fields.</li>
-<li><strong>Plasma confinement</strong> in fusion reactors relies on magnetic field manipulation.</li>
-<li><strong>Charged particle beams</strong> in astrophysical jets are shaped by cosmic magnetic fields.</li>
+<li><strong>Plasma Physics</strong>: It dictates the motion of ions and electrons in ionized gases, enabling the study of phenomena like fusion processes in stars or laboratory plasma confinement for energy research.</li>
+<li><strong>Astrophysics</strong>: It underpins the dynamics of charged particles in cosmic environments, such as the deflection of <strong>solar wind</strong> particles by Earth’s magnetic field, the behavior of particles in <strong>planetary magnetospheres</strong>, or the propagation of <strong>cosmic rays</strong> through the <strong>interstellar medium</strong>.</li>
+<li><strong>Mass Spectrometry</strong>: It facilitates the separation and identification of ions based on their mass-to-charge ratios, a technique critical for chemical analysis and material characterization.</li>
+<li><strong>Particle Accelerators</strong>: It powers devices like <strong>cyclotrons</strong>, <strong>synchrotrons</strong>, and <strong>linear accelerators</strong>, where precise control of electric and magnetic fields accelerates particles to relativistic speeds for experiments in particle physics and medical applications like cancer therapy.</li>
 </ul>
-<h3 id="2-simulating-particle-motion">2. Simulating Particle Motion</h3>
+<p>Through computational simulations, we can observe and analyze the rich variety of <strong>trajectories</strong> and <strong>interactions</strong> that arise from the Lorentz force under different field configurations and initial conditions. By varying parameters—such as the strength and orientation of <span class="arithmatex">\( \vec{E} \)</span> and <span class="arithmatex">\( \vec{B} \)</span>, or the particle’s initial position, velocity, and charge—simulations reveal behaviors ranging from simple linear motion to intricate helical paths or chaotic orbits. These virtual experiments provide insights into phenomena that are difficult or impractical to study directly, such as the motion of charged particles in the <strong>Van Allen radiation belts</strong>, the acceleration of particles in <strong>solar flares</strong>, or the design of next-generation accelerators. Moreover, simulations allow us to test theoretical predictions, optimize engineering designs, and explore hypothetical scenarios, bridging the gap between abstract theory and tangible applications.</p>
+<h1 id="objectives">Objectives</h1>
+<h2 id="applications-of-the-lorentz-force">Applications of the Lorentz Force</h2>
+<p>The Lorentz force, with its ability to govern the motion of charged particles through electric and magnetic fields, finds practical utility across a diverse array of scientific and technological applications. Below, we explore how this fundamental principle is harnessed in various contexts, from precision instruments to cosmic phenomena, driving innovation and deepening our understanding of the universe.</p>
+<ul>
+<li><strong>Mass Spectrometers</strong>: Mass spectrometers leverage the Lorentz force to separate ions based on their mass-to-charge ratio (<span class="arithmatex">\( m/q \)</span>), a critical process in analytical chemistry and material science. When ions are injected into a mass spectrometer, they encounter a combination of electric and magnetic fields. The electric field accelerates the ions, while the magnetic field, applied perpendicular to their velocity, induces a curved trajectory via the <span class="arithmatex">\( q\vec{v} \times \vec{B} \)</span> term. The radius of this curvature depends on the ion’s mass, charge, and velocity, allowing precise differentiation—lighter ions curve more sharply than heavier ones with the same charge. This technique is indispensable for identifying molecular compositions, detecting isotopes (e.g., carbon-12 vs. carbon-13), and analyzing complex samples, such as proteins in biological research or pollutants in environmental studies.</li>
+</ul>
+<p>The figure below illustrates the schematics of a simple mass spectrometer equipped with a sector-type mass analyzer, specifically designed for measuring carbon dioxide isotope ratios (Isotope Ratio Mass Spectrometry, or IRMS), such as in the carbon-13 urea breath test. This setup harnesses the Lorentz force to separate ions based on their mass-to-charge ratio (<span class="arithmatex">\( m/q \)</span>). Ions, generated from a sample (e.g., CO₂ gas), are accelerated by an electric field (<span class="arithmatex">\( \vec{E} \)</span>) and then directed into a magnetic field (<span class="arithmatex">\( \vec{B} \)</span>) region. The magnetic field, oriented perpendicular to the ions’ velocity, induces curved trajectories via the Lorentz force component <span class="arithmatex">\( q\vec{v} \times \vec{B} \)</span>. Lighter ions (e.g., <span class="arithmatex">\(^{12}\text{C}^{16}\text{O}_2\)</span>) follow tighter curves, while heavier ions (e.g., <span class="arithmatex">\(^{13}\text{C}^{16}\text{O}_2\)</span>) trace wider paths, enabling precise detection of isotopic compositions. In the carbon-13 urea breath test, this differentiation helps diagnose conditions like <em>Helicobacter pylori</em> infection by analyzing exhaled CO₂ isotope ratios.</p>
+<p><img alt="Mass Spectrometer Schematic" src="../image.png"/></p>
+<ul>
+<li>
+<p><strong>Cyclotrons and Synchrotrons</strong>: In particle accelerators like cyclotrons and synchrotrons, the Lorentz force is the engine behind accelerating charged particles to extraordinarily high speeds. Cyclotrons use a constant magnetic field to confine particles (e.g., protons or electrons) in a spiral path, while an oscillating electric field, timed to match the particle’s increasing orbit, provides periodic boosts in energy. The magnetic component (<span class="arithmatex">\( q\vec{v} \times \vec{B} \)</span>) ensures circular motion, with the radius growing as the particle gains speed. Synchrotrons, an advanced evolution, adjust both the magnetic field strength and electric field frequency dynamically to keep particles in a fixed-radius orbit as they approach relativistic speeds. These accelerators are vital for high-energy physics experiments (e.g., probing subatomic particles at CERN) and medical applications, such as producing beams for radiation therapy to target tumors with precision.</p>
+</li>
+<li>
+<p><strong>Plasma Confinement</strong>: Plasma confinement in fusion reactors relies heavily on the manipulation of magnetic fields through the Lorentz force to control the behavior of charged particles in a hot, ionized gas. In devices like tokamaks and stellarators, strong magnetic fields are engineered to trap and stabilize plasma—composed of ions and electrons—at temperatures exceeding millions of degrees, where nuclear fusion can occur. The Lorentz force’s magnetic component confines the particles in helical paths around magnetic field lines, preventing them from colliding with reactor walls and losing energy. This containment is crucial for sustaining fusion reactions, which aim to replicate the Sun’s energy production process, offering a potential pathway to clean, virtually limitless energy. Challenges like plasma instabilities and turbulence further highlight the Lorentz force’s role in ongoing research to achieve practical fusion power.</p>
+</li>
+<li>
+<p><strong>Charged Particle Beams in Astrophysical Jets</strong>: In the vastness of space, the Lorentz force shapes the dynamics of charged particle beams within astrophysical jets—colossal streams of plasma ejected from objects like black holes, neutron stars, and active galactic nuclei. These jets, extending thousands of light-years, are propelled and collimated by cosmic magnetic fields interacting with charged particles (e.g., electrons and protons). The <span class="arithmatex">\( q\vec{v} \times \vec{B} \)</span> term causes particles to spiral around magnetic field lines, focusing the jet into a narrow, high-energy beam that emits intense radiation, observable as radio waves, X-rays, or gamma rays. This process not only reveals the magnetic structure of cosmic environments but also influences star formation and galaxy evolution by redistributing energy and matter. Studying these jets through the lens of the Lorentz force enhances our understanding of extreme astrophysical phenomena and the fundamental forces at play across the universe.</p>
+</li>
+</ul>
+<p>These applications demonstrate the Lorentz force’s versatility, bridging laboratory-scale technologies with cosmic-scale processes. By manipulating electric and magnetic fields, we can harness this force to solve practical problems, advance scientific frontiers, and explore the mysteries of nature at every scale.</p>
+<h3 id="simulating-particle-motion">Simulating Particle Motion</h3>
 <p>We simulate a charged particle's motion under the influence of:
 - A <strong>uniform magnetic field</strong>
 - <strong>Uniform electric and magnetic fields</strong>
 - <strong>Crossed electric and magnetic fields</strong></p>
-<h3 id="3-parameter-exploration">3. Parameter Exploration</h3>
+<h3 id="parameter-exploration">Parameter Exploration</h3>
 <p>We vary:
 - Electric field vector <span class="arithmatex">\( \vec{E} \)</span>
 - Magnetic field vector <span class="arithmatex">\( \vec{B} \)</span>
 - Initial velocity <span class="arithmatex">\( \vec{v}_0 \)</span>
 - Charge <span class="arithmatex">\( q \)</span>
 - Mass <span class="arithmatex">\( m \)</span></p>
-<h3 id="4-visualization">4. Visualization</h3>
+<h3 id="visualization">Visualization</h3>
 <p>We plot:
 - 2D and 3D trajectories of the particle.
 - Different motion types: <strong>circular</strong>, <strong>helical</strong>, or <strong>drift</strong> motion.
