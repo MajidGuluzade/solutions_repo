@@ -98,7 +98,7 @@ plt.show()
 
 ## Visual Output
 
-![Trajectory](Lorentz_Trajectory.png)  
+![Trajectory](Screenshot 2025-04-07 at 3.39.49 PM.png)  
 *Figure 1: Helical trajectory of a charged particle in a uniform magnetic field.*
 
 ---
