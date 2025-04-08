@@ -98,6 +98,9 @@ print(f"Binomial: {np.var(binom_pop):.2f}")
 - **n=30**: Bell-shaped, close to normal.
 - **n=50**: Nearly perfect normal curve.
 
+![alt text](image.png)
+![alt text](image-1.png)
+
 ### 2. **Exponential Distribution (λ = 0.5, Mean = 2)**
 - **Population**: Right-skewed, mean = 2, variance ≈ 4.
 
@@ -107,6 +110,9 @@ print(f"Binomial: {np.var(binom_pop):.2f}")
 - **n=30**: Approaching normality, slight skew remains.
 - **n=50**: Very close to normal, minimal skew.
 
+![alt text](image-2.png)
+![alt text](image-3.png)
+
 ### 3. **Binomial Distribution (n=20, p=0.5)**
 - **Population**: Discrete, symmetric, mean = 10, variance ≈ 5.
 
@@ -115,6 +121,9 @@ print(f"Binomial: {np.var(binom_pop):.2f}")
 - **n=10**: Smoother, bell-like shape emerging.
 - **n=30**: Nearly continuous, normal-like.
 - **n=50**: Indistinguishable from a normal distribution.
+
+![alt text](image-4.png)
+![alt text](image-5.png)
 
 # Parameter Exploration
 
