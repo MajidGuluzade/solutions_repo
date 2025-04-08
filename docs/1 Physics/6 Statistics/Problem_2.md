@@ -163,3 +163,20 @@ plt.show()
 #### Plot:
 Both methods converge to π, with the Circle method being slightly more stable. The error decreases as \( \sim \frac{1}{\sqrt{N}} \).
 
+## Analysis
+
+### Circle Method
+- **Accuracy**: Improves with \(n\), but the convergence is slow with stochastic error \( \sim \frac{1}{\sqrt{N}} \).
+- **Efficiency**: Fast computation using vectorized operations with minimal memory usage.
+
+### Buffon’s Needle
+- **Accuracy**: Similar slow convergence, but often noisier due to lower crossing probability \( \left(\frac{2L}{\pi D} \approx 0.32 \text{ for } L = 1, D = 2\right) \).
+- **Efficiency**: More computationally intensive (requires trigonometry per drop), visually complex.
+
+### Comparison
+- **Convergence Rate**: Both methods exhibit \( O\left(\frac{1}{\sqrt{N}}\right) \) error, but the Circle method is tighter due to the higher hit probability (\(\pi/4 \approx 0.785\) vs. 0.32).
+- **Computational Cost**: The Circle method is simpler and faster, while Buffon’s Needle requires angle calculations per drop.
+
+## Discussion
+The Circle method leverages a straightforward area ratio, making it intuitive and efficient. Buffon’s Needle, while elegant and geometric, is less practical due to its lower event probability and higher computational overhead. Both methods confirm the strength of Monte Carlo simulations: randomness can yield reliable estimates with sufficient trials. Their slow convergence highlights a common trade-off—simplicity versus precision—found in probabilistic methods.
+
