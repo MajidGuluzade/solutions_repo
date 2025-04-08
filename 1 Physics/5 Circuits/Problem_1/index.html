@@ -310,21 +310,18 @@ if __name__ == "__main__":
     test_circuit_solver()
 </code></pre>
 <h1 id="example-breakdowns">Example Breakdowns</h1>
-<p><img alt="alt text" src="../Screenshot%202025-04-08%20at%209.23.00%E2%80%AFAM.png"/></p>
 <h3 id="series-10-20">Series (10Ω + 20Ω):</h3>
-<ul>
-<li><strong>Initial</strong>: A --10Ω--&gt; B --20Ω--&gt; C</li>
-<li><strong>Step 1</strong>: B (degree 2), combine 10Ω + 20Ω = 30Ω.</li>
-<li><strong>Final</strong>: A --30Ω--&gt; C.</li>
-<li><strong>Result</strong>: 30Ω.</li>
-</ul>
+<p><img alt="Initial Graph Examp[le 1]" src="../Screenshot%202025-04-08%20at%209.23.00%E2%80%AFAM.png"/>
+- <strong>Initial</strong>: A --10Ω--&gt; B --20Ω--&gt; C
+- <strong>Step 1</strong>: B (degree 2), combine 10Ω + 20Ω = 30Ω.
+- <strong>Final</strong>: A --30Ω--&gt; C.
+- <strong>Result</strong>: 30Ω.</p>
 <h3 id="parallel-10-20">Parallel (10Ω || 20Ω):</h3>
-<ul>
-<li><strong>Initial</strong>: A --10Ω--&gt; B, A --20Ω--&gt; B</li>
-<li><strong>Step 1</strong>: Parallel, 1/R_eq = 1/10 + 1/20 = 0.15, R_eq = 6.67Ω.</li>
-<li><strong>Final</strong>: A --6.67Ω--&gt; B.</li>
-<li><strong>Result</strong>: 6.67Ω.</li>
-</ul>
+<p><img alt="Initial Graph Example 2" src="../image.png"/>
+- <strong>Initial</strong>: A --10Ω--&gt; B, A --20Ω--&gt; B
+- <strong>Step 1</strong>: Parallel, 1/R_eq = 1/10 + 1/20 = 0.15, R_eq = 6.67Ω.
+- <strong>Final</strong>: A --6.67Ω--&gt; B.
+- <strong>Result</strong>: 6.67Ω.</p>
 <h3 id="nested-10-20-30">Nested (10Ω + (20Ω || 30Ω)):</h3>
 <ul>
 <li><strong>Initial</strong>: A --10Ω--&gt; B --20Ω--&gt; C, B --30Ω--&gt; C</li>
