@@ -172,6 +172,30 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="markdown-document-estimating-pi-using-monte-carlo-methods">Markdown Document: Estimating Pi using Monte Carlo Methods</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Monte Carlo methods harness randomness to solve problems numerically, offering a blend of simplicity and power. Estimating <span class="arithmatex">\( \pi \)</span> through these techniques—whether by scattering points in a circle or dropping needles across lines—marries probability, geometry, and computation in an intuitive way. This exercise not only approximates a mathematical constant but also illuminates how random sampling can tackle complex challenges in fields like physics, finance, and simulations. It’s a hands-on introduction to convergence, efficiency, and the elegance of probabilistic thinking.</p>
+<h2 id="part-1-estimating-pi-using-a-circle">Part 1: Estimating <span class="arithmatex">\( \pi \)</span> Using a Circle</h2>
+<h3 id="theoretical-foundation">Theoretical Foundation</h3>
+<p>Imagine a unit circle (radius = 1) inscribed in a 2x2 square (side length = 2), centered at (0,0). The circle’s area is <span class="arithmatex">\( \pi r^2 = \pi(1)^2 = \pi \)</span>, and the square’s area is <span class="arithmatex">\( 2^2 = 4 \)</span>. If we randomly scatter points uniformly across the square, the probability a point lands inside the circle is the ratio of areas: <span class="arithmatex">\( \frac{\pi}{4} \)</span>. By generating <span class="arithmatex">\( N \)</span> total points and counting <span class="arithmatex">\( N_{in} \)</span> (those inside the circle, where <span class="arithmatex">\( x^2 + y^2 \leq 1 \)</span>), we estimate:</p>
+<div class="arithmatex">\[
+\pi \approx 4 \times \frac{N_{in}}{N}
+\]</div>
+<h3 id="simulation-and-visualization">Simulation and Visualization</h3>
+<p>We’ll generate random points, check if they’re inside the unit circle, and plot them. We’ll also track the estimate’s convergence.</p>
+<h3 id="analysis">Analysis</h3>
+<p>Accuracy improves with more points, but convergence is slow due to the method’s probabilistic nature (error <span class="arithmatex">\( \sim \frac{1}{\sqrt{N}} \)</span>).</p>
+<h2 id="part-2-estimating-pi-using-buffons-needle">Part 2: Estimating <span class="arithmatex">\( \pi \)</span> Using Buffon’s Needle</h2>
+<h3 id="theoretical-foundation_1">Theoretical Foundation</h3>
+<p>In Buffon’s Needle problem, a needle of length <span class="arithmatex">\( L \)</span> is dropped randomly onto a plane with parallel lines spaced <span class="arithmatex">\( D \)</span> apart (assume <span class="arithmatex">\( L \leq D \)</span>). The probability it crosses a line depends on its position and angle. For a needle dropped with random midpoint <span class="arithmatex">\( y \)</span> (uniform over [0, <span class="arithmatex">\( D/2 \)</span>]) and angle <span class="arithmatex">\( \theta \)</span> (uniform over [0, <span class="arithmatex">\( \pi \)</span>]), the crossing condition is <span class="arithmatex">\( y \leq \frac{L}{2} \sin(\theta) \)</span>. The probability of crossing is <span class="arithmatex">\( \frac{2L}{\pi D} \)</span>, so:</p>
+<div class="arithmatex">\[
+\pi \approx \frac{2L \times N}{D \times N_{cross}}
+\]</div>
+<p>where <span class="arithmatex">\( N \)</span> is the number of drops, and <span class="arithmatex">\( N_{cross} \)</span> is the number of crossings.</p>
+<h3 id="simulation-and-visualization_1">Simulation and Visualization</h3>
+<p>We’ll simulate needle drops, count crossings, and visualize the setup.</p>
+<h3 id="analysis_1">Analysis</h3>
+<p>We’ll compare its convergence to the circle method, noting computational differences.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
