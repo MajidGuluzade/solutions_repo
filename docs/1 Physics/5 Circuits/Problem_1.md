@@ -150,26 +150,35 @@ if __name__ == "__main__":
 # Example Breakdowns
 
 ### Series (10Ω + 20Ω):
-![Initial Graph Examp[le 1]](<Screenshot 2025-04-08 at 9.23.00 AM.png>)
+![Initial Graph Examp[e 1]](<Screenshot 2025-04-08 at 9.23.00 AM.png>)
+
 - **Initial**: A --10Ω--> B --20Ω--> C
 - **Step 1**: B (degree 2), combine 10Ω + 20Ω = 30Ω.
 - **Final**: A --30Ω--> C.
 - **Result**: 30Ω.
- 
+
+ ![Final Graph Example 1](image-2.png)
 
 ### Parallel (10Ω || 20Ω):
 ![Initial Graph Example 2](image.png)
+
 - **Initial**: A --10Ω--> B, A --20Ω--> B
 - **Step 1**: Parallel, 1/R_eq = 1/10 + 1/20 = 0.15, R_eq = 6.67Ω.
 - **Final**: A --6.67Ω--> B.
 - **Result**: 6.67Ω.
 
+![Final example 2](image-3.png)
+
 ### Nested (10Ω + (20Ω || 30Ω)):
+![Initial Graph Example 3](image-1.png)
+
 - **Initial**: A --10Ω--> B --20Ω--> C, B --30Ω--> C
 - **Step 1**: Parallel B-C, 1/R_eq = 1/20 + 1/30 = 0.0833, R_eq = 12Ω.
 - **Step 2**: Series A-B-C, 10Ω + 12Ω = 22Ω.
 - **Final**: A --22Ω--> C.
 - **Result**: 22Ω.
+ 
+![Final Graph Example 3 ](image-4.png)
 
 # Efficiency and Improvements
 
