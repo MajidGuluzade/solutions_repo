@@ -148,8 +148,9 @@ if __name__ == "__main__":
     test_circuit_solver()
 ```
 # Example Breakdowns
-![alt text](<Screenshot 2025-04-08 at 9.23.00 AM.png>)
+
 ### Series (10Ω + 20Ω):
+![Initial Graph Examp[le 1]](<Screenshot 2025-04-08 at 9.23.00 AM.png>)
 - **Initial**: A --10Ω--> B --20Ω--> C
 - **Step 1**: B (degree 2), combine 10Ω + 20Ω = 30Ω.
 - **Final**: A --30Ω--> C.
@@ -157,6 +158,7 @@ if __name__ == "__main__":
  
 
 ### Parallel (10Ω || 20Ω):
+![Initial Graph Example 2](image.png)
 - **Initial**: A --10Ω--> B, A --20Ω--> B
 - **Step 1**: Parallel, 1/R_eq = 1/10 + 1/20 = 0.15, R_eq = 6.67Ω.
 - **Final**: A --6.67Ω--> B.
