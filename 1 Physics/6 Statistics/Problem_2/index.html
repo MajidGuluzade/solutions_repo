@@ -332,6 +332,24 @@ plt.show()
 </table>
 <h4 id="plot">Plot:</h4>
 <p>Both methods converge to π, with the Circle method being slightly more stable. The error decreases as <span class="arithmatex">\( \sim \frac{1}{\sqrt{N}} \)</span>.</p>
+<h2 id="analysis_2">Analysis</h2>
+<h3 id="circle-method">Circle Method</h3>
+<ul>
+<li><strong>Accuracy</strong>: Improves with <span class="arithmatex">\(n\)</span>, but the convergence is slow with stochastic error <span class="arithmatex">\( \sim \frac{1}{\sqrt{N}} \)</span>.</li>
+<li><strong>Efficiency</strong>: Fast computation using vectorized operations with minimal memory usage.</li>
+</ul>
+<h3 id="buffons-needle">Buffon’s Needle</h3>
+<ul>
+<li><strong>Accuracy</strong>: Similar slow convergence, but often noisier due to lower crossing probability <span class="arithmatex">\( \left(\frac{2L}{\pi D} \approx 0.32 \text{ for } L = 1, D = 2\right) \)</span>.</li>
+<li><strong>Efficiency</strong>: More computationally intensive (requires trigonometry per drop), visually complex.</li>
+</ul>
+<h3 id="comparison">Comparison</h3>
+<ul>
+<li><strong>Convergence Rate</strong>: Both methods exhibit <span class="arithmatex">\( O\left(\frac{1}{\sqrt{N}}\right) \)</span> error, but the Circle method is tighter due to the higher hit probability (<span class="arithmatex">\(\pi/4 \approx 0.785\)</span> vs. 0.32).</li>
+<li><strong>Computational Cost</strong>: The Circle method is simpler and faster, while Buffon’s Needle requires angle calculations per drop.</li>
+</ul>
+<h2 id="discussion">Discussion</h2>
+<p>The Circle method leverages a straightforward area ratio, making it intuitive and efficient. Buffon’s Needle, while elegant and geometric, is less practical due to its lower event probability and higher computational overhead. Both methods confirm the strength of Monte Carlo simulations: randomness can yield reliable estimates with sufficient trials. Their slow convergence highlights a common trade-off—simplicity versus precision—found in probabilistic methods.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
