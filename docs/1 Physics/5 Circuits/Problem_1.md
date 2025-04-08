@@ -148,7 +148,7 @@ if __name__ == "__main__":
     test_circuit_solver()
 ```
 # Example Breakdowns
-
+![alt text](<Screenshot 2025-04-08 at 9.23.00 AM.png>)
 ### Series (10Ω + 20Ω):
 - **Initial**: A --10Ω--> B --20Ω--> C
 - **Step 1**: B (degree 2), combine 10Ω + 20Ω = 30Ω.
