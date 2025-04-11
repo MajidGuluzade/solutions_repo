@@ -121,16 +121,31 @@ angles = np.arange(1, 91, 1)  # From 1° to 90°
 # Calculate ranges for each angle
 ranges = [calculate_range(v0, angle, g) for angle in angles]
 
+# Find angle with maximum range
+max_range = max(ranges)
+max_angle = angles[ranges.index(max_range)]
+
 # Plotting the results
-plt.plot(angles, ranges)
+plt.figure(figsize=(10, 6))
+plt.plot(angles, ranges, label='Projectile Range')
+plt.axvline(45, color='r', linestyle='--', label='45° (Expected Max Range)')
+plt.scatter([max_angle], [max_range], color='red', zorder=5)
+plt.annotate(f'Max Range: {max_range:.2f} m\nat {max_angle}°',
+             xy=(max_angle, max_range),
+             xytext=(max_angle + 5, max_range - 10),
+             arrowprops=dict(facecolor='red', shrink=0.05),
+             fontsize=10, color='red')
+
 plt.title("Projectile Range vs Launch Angle")
 plt.xlabel("Launch Angle (degrees)")
 plt.ylabel("Range (meters)")
+plt.legend()
 plt.grid(True)
+plt.tight_layout()
 plt.show()
 
 ```
-![Graphical Representation of Python scripT](imgg.png)
+![Graphical Representation of Python Script](image.png)
 *Figure 3: Graphical Representation of Python Script.*
 
 
