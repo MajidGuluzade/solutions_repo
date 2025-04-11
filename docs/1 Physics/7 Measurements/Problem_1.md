@@ -214,6 +214,42 @@ The measured value is 0.44% lower, which is reasonable due to:
 | \( T \) (s)                      | 2.0109 | 0.00081     |
 | \( g \) (m/s²)                   | 9.763  | 0.009       |
 
+
+# Python Script
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Data: time for 10 oscillations (seconds)
+t_10 = [20.12, 20.08, 20.15, 20.10, 20.09, 20.11, 20.13, 20.07, 20.14, 20.10]
+
+# Calculate mean and standard deviation
+mean_t10 = np.mean(t_10)
+std_t10 = np.std(t_10, ddof=1)
+
+# Create histogram
+plt.figure(figsize=(8, 6))
+plt.hist(t_10, bins=5, edgecolor='black', alpha=0.7, color='skyblue')
+plt.axvline(mean_t10, color='red', linestyle='--', label=f'Mean = {mean_t10:.3f} s')
+plt.axvline(mean_t10 + std_t10, color='green', linestyle=':', label=f'Std Dev = {std_t10:.3f} s')
+plt.axvline(mean_t10 - std_t10, color='green', linestyle=':')
+
+# Customize plot
+plt.title('Histogram of Time for 10 Oscillations', fontsize=14)
+plt.xlabel('Time for 10 Oscillations (s)', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+# Save and show
+plt.savefig('t10_histogram.png', dpi=300)
+plt.show()
+```
+# Results and Visualizations
+
+![Histogram of Time for 10 Oscillations](image.png)
+
 ### 2. Discussion on Uncertainties
 
 - **Length**: The ruler resolution limits \(\delta L\). A caliper could help, but the impact is small (0.05%).
