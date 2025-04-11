@@ -3,6 +3,7 @@
 
 ## Motivation
 The concept of escape velocity is fundamental in understanding the speed needed for an object to break free from a celestial body's gravitational influence. Building on this, the first, second, and third cosmic velocities define the speeds necessary to:
+
 1. **Achieve Orbit** (first cosmic velocity),
 2. **Escape the Gravitational Influence** (second cosmic velocity), and
 3. **Escape the Star System** (third cosmic velocity).
