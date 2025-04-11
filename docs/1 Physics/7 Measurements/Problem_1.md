@@ -299,5 +299,3 @@ The final uncertainty:
 \delta g = 0.009 \, \text{m/s}^2 \quad (\sim 0.09\%)
 \]
 indicates a robust measurement, closely matching the standard value and validating the method.
-
----
