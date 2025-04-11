@@ -246,7 +246,7 @@ plt.grid(True, alpha=0.3)
 plt.savefig('t10_histogram.png', dpi=300)
 plt.show()
 ```
-# Results and Visualizations
+# Visualizations
 
 ![Histogram of Time for 10 Oscillations](image.png)
 
