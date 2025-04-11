@@ -154,122 +154,71 @@ Relative uncertainty in \(g\):
 \[
 g = 9.763 \pm 0.009 \, \text{m/s}^2
 \]
-# Calculations
 
-## 1. Calculate the Period (𝑇)
+# Analysis
 
-The period is:
+## 1. Comparison with Standard Value
 
-\[
-T = \frac{t_{10}}{10}
-\]
-
-### Mean time for 10 oscillations (𝑡̅₁₀):
+The standard value for gravitational acceleration is:
 
 \[
-t_{10} = [20.12, 20.08, 20.15, 20.10, 20.09, 20.11, 20.13, 20.07, 20.14, 20.10]
+g_{\text{standard}} = 9.80665 \, \text{m/s}^2
 \]
+
+The difference between the measured and standard values is:
 
 \[
-\bar{t}_{10} = \frac{20.12 + 20.08 + 20.15 + 20.10 + 20.09 + 20.11 + 20.13 + 20.07 + 20.14 + 20.10}{10} = 20.109 \, \text{s}
+|9.80665 - 9.763| = 0.04365 \, \text{m/s}^2
 \]
 
-### Standard deviation (𝜎ₜ):
+The measured value is 0.44% lower, which is reasonable due to:
 
-\[
-\Sigma (t_{10,i} - 20.109)^2: 0.000121, 0.000841, 0.001681, 0.000001, 0.000361, 0.000001, 0.000441, 0.001521, 0.000961, 0.000001
-\]
-
-\[
-\Sigma = 0.00591
-\]
-
-\[
-\sigma_t = \frac{0.00591}{9} = 0.0006567 \approx 0.0256 \, \text{s}
-\]
-
-### Uncertainty in mean:
-
-\[
-\delta \bar{t}_{10} = \frac{\sigma_t}{\sqrt{N}} = \frac{0.0256}{\sqrt{10}} \approx 0.0081 \, \text{s}
-\]
-
-### Mean period:
-
-\[
-\bar{T} = \frac{\bar{t}_{10}}{10} = \frac{20.109}{10} = 2.0109 \, \text{s}
-\]
-
-### Uncertainty in period:
-
-\[
-\delta T = \frac{\delta \bar{t}_{10}}{10} = \frac{0.0081}{10} = 0.00081 \, \text{s}
-\]
+- Local \(g\) variations (altitude, latitude).
+- Systematic errors (air resistance, pivot friction).
+- Measurement inaccuracies.
 
 ---
 
-## 2. Determine 𝑔
+## 2. Discussion
 
-The formula for gravitational acceleration is:
+### Measurement Resolution (𝐿):
 
-\[
-g = \frac{4\pi^2 L}{T^2}
-\]
+- Ruler resolution (1 mm) gives \(\frac{\delta L}{L} = 0.05\%\), which is minor. 
+- A caliper could improve precision.
+- A longer pendulum (\(L\)) reduces relative uncertainty but is limited by setup constraints.
 
-Given:
+### Timing Variability (𝑇):
 
-\[
-L = 1.000 \, \text{m}, \quad T = 2.0109 \, \text{s}
-\]
+- Standard deviation (\(\sigma_t = 0.0256 \, \text{s}\)) reflects human reaction time (~0.1 s).
+- Measuring 10 oscillations and 10 trials reduces \(\frac{\delta T}{T}\) to 0.04%.
+- Automated timing (e.g., photogate) would help, but isn’t necessary for this experiment.
 
-\[
-T^2 = (2.0109)^2 \approx 4.0437 \, \text{s}^2
-\]
+### Assumptions and Limitations:
 
-\[
-4\pi^2 \approx 39.4784
-\]
-
-\[
-g = \frac{39.4784 \times 1.000}{4.0437} \approx 9.763 \, \text{m/s}^2
-\]
+- **Small Angles**: \(\theta < 15^\circ\) ensures \(T \approx 2\pi \sqrt{\frac{L}{g}}\). Larger angles increase \(T\), underestimating \(g\).
+- **Ideal Pendulum**: Assumes point mass and massless string. Real weights shift the effective length slightly.
+- **Environment**: Air resistance and friction are small but present.
+- **Stopwatch**: Reaction time dominates over the 0.01 s resolution.
 
 ---
 
-## 3. Propagate Uncertainties
+## Deliverables
 
-Relative uncertainty in \(g\):
+### 1. Tabulated Data
 
-\[
-\frac{\delta g}{g} = \left(\frac{\delta L}{L}\right)^2 + \left(2 \frac{\delta T}{T}\right)^2
-\]
+| Quantity                        | Value  | Uncertainty |
+|----------------------------------|--------|-------------|
+| \( L \) (m)                      | 1.000  | 0.0005      |
+| \( t_{10} \) measurements (s)    | 20.12, 20.08, 20.15, 20.10, 20.09, 20.11, 20.13, 20.07, 20.14, 20.10 | - |
+| \( \bar{t}_{10} \) (s)           | 20.109 | 0.0081      |
+| \( T \) (s)                      | 2.0109 | 0.00081     |
+| \( g \) (m/s²)                   | 9.763  | 0.009       |
 
-### Length:
+### 2. Discussion on Uncertainties
 
-\[
-\frac{\delta L}{L} = \frac{0.0005}{1.000} = 0.0005
-\]
+- **Length**: The ruler resolution limits \(\delta L\). A caliper could help, but the impact is small (0.05%).
+- **Timing**: Human reaction time causes variability. Multiple oscillations/trials mitigate this. Automation would reduce \(\sigma_t\).
+- **Systematic Errors**: Air resistance and friction may lower \(g\). Using a vacuum or rigid rod could help, but they are impractical in this setup.
+- **Propagation**: \(T^2\) in \(g \propto \frac{1}{T^2}\) amplifies \(\delta T\). Thus, timing precision is critical.
 
-### Period:
-
-\[
-2 \frac{\delta T}{T} = 2 \times \frac{0.00081}{2.0109} \approx 0.000805
-\]
-
-### Combine:
-
-\[
-\frac{\delta g}{g} = (0.0005)^2 + (0.000805)^2 = 0.00000025 + 0.000000648 = 0.000000898 \approx 0.000947
-\]
-
-\[
-\delta g = 9.763 \times 0.000947 \approx 0.0092 \, \text{m/s}^2
-\]
-
----
-
-## Final result:
-
-\[
-g = 9.763 \pm 0.009 \, \text{m/s}^2
-\]
+The uncertainty (\(\delta g = 0.009 \, \text{m/s}^2\), ~0.09%) shows a robust measurement, close to the standard value, validating the method.
