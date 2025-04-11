@@ -288,6 +288,86 @@ g = \frac{39.4784 \times 1.000}{4.0437} \approx 9.763 \, \text{m/s}^2
 <div class="arithmatex">\[
 g = 9.763 \pm 0.009 \, \text{m/s}^2
 \]</div>
+<h1 id="calculations_1">Calculations</h1>
+<h2 id="1-calculate-the-period-t_1">1. Calculate the Period (𝑇)</h2>
+<p>The period is:</p>
+<div class="arithmatex">\[
+T = \frac{t_{10}}{10}
+\]</div>
+<h3 id="mean-time-for-10-oscillations-t10_1">Mean time for 10 oscillations (𝑡̅₁₀):</h3>
+<div class="arithmatex">\[
+t_{10} = [20.12, 20.08, 20.15, 20.10, 20.09, 20.11, 20.13, 20.07, 20.14, 20.10]
+\]</div>
+<div class="arithmatex">\[
+\bar{t}_{10} = \frac{20.12 + 20.08 + 20.15 + 20.10 + 20.09 + 20.11 + 20.13 + 20.07 + 20.14 + 20.10}{10} = 20.109 \, \text{s}
+\]</div>
+<h3 id="standard-deviation-t_1">Standard deviation (𝜎ₜ):</h3>
+<div class="arithmatex">\[
+\Sigma (t_{10,i} - 20.109)^2: 0.000121, 0.000841, 0.001681, 0.000001, 0.000361, 0.000001, 0.000441, 0.001521, 0.000961, 0.000001
+\]</div>
+<div class="arithmatex">\[
+\Sigma = 0.00591
+\]</div>
+<div class="arithmatex">\[
+\sigma_t = \frac{0.00591}{9} = 0.0006567 \approx 0.0256 \, \text{s}
+\]</div>
+<h3 id="uncertainty-in-mean_1">Uncertainty in mean:</h3>
+<div class="arithmatex">\[
+\delta \bar{t}_{10} = \frac{\sigma_t}{\sqrt{N}} = \frac{0.0256}{\sqrt{10}} \approx 0.0081 \, \text{s}
+\]</div>
+<h3 id="mean-period_1">Mean period:</h3>
+<div class="arithmatex">\[
+\bar{T} = \frac{\bar{t}_{10}}{10} = \frac{20.109}{10} = 2.0109 \, \text{s}
+\]</div>
+<h3 id="uncertainty-in-period_1">Uncertainty in period:</h3>
+<div class="arithmatex">\[
+\delta T = \frac{\delta \bar{t}_{10}}{10} = \frac{0.0081}{10} = 0.00081 \, \text{s}
+\]</div>
+<hr/>
+<h2 id="2-determine-g_1">2. Determine 𝑔</h2>
+<p>The formula for gravitational acceleration is:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2}
+\]</div>
+<p>Given:</p>
+<div class="arithmatex">\[
+L = 1.000 \, \text{m}, \quad T = 2.0109 \, \text{s}
+\]</div>
+<div class="arithmatex">\[
+T^2 = (2.0109)^2 \approx 4.0437 \, \text{s}^2
+\]</div>
+<div class="arithmatex">\[
+4\pi^2 \approx 39.4784
+\]</div>
+<div class="arithmatex">\[
+g = \frac{39.4784 \times 1.000}{4.0437} \approx 9.763 \, \text{m/s}^2
+\]</div>
+<hr/>
+<h2 id="3-propagate-uncertainties_1">3. Propagate Uncertainties</h2>
+<p>Relative uncertainty in <span class="arithmatex">\(g\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\delta g}{g} = \left(\frac{\delta L}{L}\right)^2 + \left(2 \frac{\delta T}{T}\right)^2
+\]</div>
+<h3 id="length_1">Length:</h3>
+<div class="arithmatex">\[
+\frac{\delta L}{L} = \frac{0.0005}{1.000} = 0.0005
+\]</div>
+<h3 id="period_1">Period:</h3>
+<div class="arithmatex">\[
+2 \frac{\delta T}{T} = 2 \times \frac{0.00081}{2.0109} \approx 0.000805
+\]</div>
+<h3 id="combine_1">Combine:</h3>
+<div class="arithmatex">\[
+\frac{\delta g}{g} = (0.0005)^2 + (0.000805)^2 = 0.00000025 + 0.000000648 = 0.000000898 \approx 0.000947
+\]</div>
+<div class="arithmatex">\[
+\delta g = 9.763 \times 0.000947 \approx 0.0092 \, \text{m/s}^2
+\]</div>
+<hr/>
+<h2 id="final-result_1">Final result:</h2>
+<div class="arithmatex">\[
+g = 9.763 \pm 0.009 \, \text{m/s}^2
+\]</div>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
