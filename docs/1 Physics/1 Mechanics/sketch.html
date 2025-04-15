@@ -1,45 +1,121 @@
+<!-- Embed this inside an HTML file or iframe -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Projectile Motion Simulation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <main>
+    <h2>🚀 Interactive Projectile Motion with Air Resistance</h2>
 
-let x = 0;
-let y = 0;
-let vx, vy;
-let g = 0.5;
-let path = [];
+    <div>
+      <label>Launch Speed: <input id="speedInput" type="number" value="20"></label>
+      <label>Angle (deg): <input id="angleInput" type="number" value="45"></label>
+      <button onclick="startSimulation()">Launch</button>
+      <button onclick="resetSimulation()">Reset</button>
+    </div>
 
-function setup() {
-  createCanvas(600, 400);
-  x = 50;
-  y = height - 50;
+    <div id="canvas-holder"></div>
 
-  let angle = radians(45); // launch angle
-  let speed = 15;          // launch speed
-  vx = speed * cos(angle);
-  vy = -speed * sin(angle); // negative due to canvas y-axis
+    <script>
+      let x, y, vx, vy, g = 0.3, drag = 0.01;
+      let speedInput, angleInput;
+      let path = [];
+      let maxHeight = 0;
+      let startTime;
+      let simulationRunning = false;
 
-  path = [];
-  background(30);
-}
+      function setup() {
+        const canvas = createCanvas(700, 400);
+        canvas.parent("canvas-holder");
 
-function draw() {
-  fill(255);
-  noStroke();
+        speedInput = document.getElementById("speedInput");
+        angleInput = document.getElementById("angleInput");
 
-  // draw the path
-  path.push([x, y]);
-  for (let i = 0; i < path.length; i++) {
-    ellipse(path[i][0], path[i][1], 3, 3);
-  }
+        background(30);
+        textSize(14);
+      }
 
-  // draw projectile
-  fill("#00f6ff");
-  ellipse(x, y, 20, 20);
+      function draw() {
+        if (!simulationRunning) return;
 
-  // update position
-  x += vx;
-  vy += g;
-  y += vy;
+        background(30);
+        fill(255);
+        noStroke();
 
-  // stop when off screen
-  if (y > height || x > width) {
-    noLoop();
-  }
-}
+        // Draw path
+        path.push([x, y]);
+        for (let pt of path) {
+          ellipse(pt[0], pt[1], 2, 2);
+        }
+
+        // Draw projectile
+        fill("#00f6ff");
+        ellipse(x, y, 20, 20);
+
+        // Air resistance (drag)
+        let v = dist(0, 0, vx, vy);
+        let dragFx = -drag * vx * v;
+        let dragFy = -drag * vy * v;
+
+        // Update velocities
+        vx += dragFx;
+        vy += g + dragFy;
+
+        // Update positions
+        x += vx;
+        y += vy;
+
+        // Track max height
+        if (y < maxHeight) maxHeight = y;
+
+        // Stop when off-screen
+        if (y > height || x > width) {
+          simulationRunning = false;
+        }
+
+        // Display info
+        displayStats();
+      }
+
+      function startSimulation() {
+        const angleDeg = float(angleInput.value);
+        const speed = float(speedInput.value);
+
+        const angle = radians(angleDeg);
+        vx = speed * cos(angle);
+        vy = -speed * sin(angle);
+
+        x = 50;
+        y = height - 50;
+        path = [];
+        maxHeight = y;
+        startTime = millis();
+        simulationRunning = true;
+        loop();
+      }
+
+      function resetSimulation() {
+        simulationRunning = false;
+        path = [];
+        background(30);
+        redraw();
+      }
+
+      function displayStats() {
+        const timeElapsed = ((millis() - startTime) / 1000).toFixed(2);
+        const velocityMag = dist(0, 0, vx, vy).toFixed(2);
+        const angle = degrees(atan2(-vy, vx)).toFixed(2);
+
+        fill(255);
+        text(`🕒 Time: ${timeElapsed}s`, 10, 20);
+        text(`🎯 Speed: ${velocityMag} px/frame`, 10, 40);
+        text(`📐 Angle: ${angle}°`, 10, 60);
+        text(`⬆️ Max Height: ${(height - maxHeight).toFixed(2)} px`, 10, 80);
+      }
+    </script>
+  </main>
+</body>
+</html>
