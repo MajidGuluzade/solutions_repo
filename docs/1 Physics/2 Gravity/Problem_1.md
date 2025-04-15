@@ -120,6 +120,10 @@ plt.show()
 ### My Embedded Sketch
 <iframe src="https://editor.p5js.org/majidguluzada/full/5t__9zsfa"></iframe>
 
+### Explanation 
+The main idea of the simulation is to demonstrate the relationship between the **orbital radius** and the **orbital period** of an object in orbit, based on **Kepler's Third Law of Planetary Motion**. The law states that the square of the orbital period is directly proportional to the cube of the orbital radius. As you increase the orbital radius, the object takes longer to complete its orbit, which results in an increase in the orbital period. This relationship is visualized by the object moving more slowly along a larger orbit, with the simulation providing real-time feedback on the orbital period.
+
+
 ## Conclusion
 Kepler’s Third Law establishes a crucial relationship between the orbital period and the orbital radius of a celestial body. The derivation confirms that the square of the orbital period (\( T^2 \)) is directly proportional to the cube of the orbital radius (\( r^3 \)), providing a foundational principle in celestial mechanics. 
 
