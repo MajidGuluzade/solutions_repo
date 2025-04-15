@@ -145,7 +145,7 @@ plt.show()
 ![Poincaré Section](forced_damped_poincare_section.png)
 *Figure 3: Poincaré Section.*
 
-### My Embedded Sketch
+### The simulation of the motion of a forced damped pendulum
 <iframe src="https://editor.p5js.org/majidguluzada/full/Og_rhCcQJ" width="720" height="600"></iframe>
 
 The simulation shows the motion of a forced damped pendulum, where gravity, damping, and an external driving force affect the pendulum's behavior. The user can adjust the driving frequency using a slider, which lets them observe how the pendulum's oscillations change, particularly when the driving frequency matches the natural frequency, leading to resonance. During resonance, the pendulum absorbs more energy from the external force, resulting in larger amplitude oscillations. The pendulum's position and velocity are updated over time, and key parameters like driving frequency and time are displayed for better understanding.

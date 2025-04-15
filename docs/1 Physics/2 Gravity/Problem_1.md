@@ -117,7 +117,7 @@ plt.show()
 ![Verification of Kepler's Third Law](verification_of_Kepler's_Third_Law.png)
 *Figure 2: Verification of Kepler's Third Law.*
 
-### My Embedded Sketch
+### The simulation demonstrats the relationship between the **orbital radius** and the **orbital period** 
 <iframe src="https://editor.p5js.org/majidguluzada/full/5t__9zsfa" width="720" height="600"></iframe>
 
 ### Explanation 

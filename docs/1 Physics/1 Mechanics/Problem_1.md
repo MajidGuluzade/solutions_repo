@@ -158,7 +158,7 @@ The investigation confirms the theoretical prediction that the range of a projec
 - Extending the study to different launch heights.
 
 
-### My Embedded Sketch
+### The simulation of projectile motion
 
 <iframe src="https://editor.p5js.org/majidguluzada/full/iIKtPmC-M" width="720" height="600"></iframe>
 
