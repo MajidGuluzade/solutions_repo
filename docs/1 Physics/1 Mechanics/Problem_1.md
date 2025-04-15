@@ -160,4 +160,4 @@ The investigation confirms the theoretical prediction that the range of a projec
 
 <h3>My Embedded Sketch</h3>
 
-<iframe src="https://editor.p5js.org/majidguluzada/full/iIKtPmC-M" width="720" height="550"></iframe>
+<iframe src="https://editor.p5js.org/majidguluzada/full/iIKtPmC-M" width="720" height="600"></iframe>
