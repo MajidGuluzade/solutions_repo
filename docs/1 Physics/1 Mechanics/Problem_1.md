@@ -159,4 +159,5 @@ The investigation confirms the theoretical prediction that the range of a projec
 
 
 <h3>My Embedded Sketch</h3>
-<iframe src="sketch.html" width="720" height="500" frameborder="0"></iframe>
+
+[🔗 Open Simulation](.sketch.html)
