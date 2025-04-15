@@ -159,18 +159,4 @@ The investigation confirms the theoretical prediction that the range of a projec
 
 
 <h3>My Embedded Sketch</h3>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-<div id="sketch-holder"></div>
-
-<script>
-  new p5((p) => {
-    p.setup = () => {
-      p.createCanvas(400, 400);
-      p.background(200);
-    };
-    p.draw = () => {
-      p.fill(100);
-      p.ellipse(p.mouseX, p.mouseY, 30, 30);
-    };
-  }, document.getElementById("sketch-holder"));
-</script>
+<iframe src="sketch.html" width="720" height="500" frameborder="0"></iframe>
