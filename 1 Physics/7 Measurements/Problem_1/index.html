@@ -403,6 +403,111 @@ plt.show()
 <li><strong>Propagation</strong>: <span class="arithmatex">\(T^2\)</span> in <span class="arithmatex">\(g \propto \frac{1}{T^2}\)</span> amplifies <span class="arithmatex">\(\delta T\)</span>. Thus, timing precision is critical.</li>
 </ul>
 <p>The uncertainty (<span class="arithmatex">\(\delta g = 0.009 \, \text{m/s}^2\)</span>, ~0.09%) shows a robust measurement, close to the standard value, validating the method.</p>
+<h1 id="problem-1-exploring-the-central-limit-theorem-through-simulations">Problem 1: Exploring the Central Limit Theorem through Simulations</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The Central Limit Theorem (CLT) states that the sampling distribution of the sample mean becomes approximately normal as the sample size increases, regardless of the population’s original distribution. This property underpins many statistical methods, making it crucial to understand through simulations.</p>
+<h2 id="simulating-sampling-distributions">Simulating Sampling Distributions</h2>
+<p>We considered the following population distributions:</p>
+<ul>
+<li><strong>Uniform Distribution</strong> <span class="arithmatex">\(U(a, b)\)</span></li>
+<li><strong>Exponential Distribution</strong> <span class="arithmatex">\(Exp(\lambda)\)</span></li>
+<li><strong>Binomial Distribution</strong> <span class="arithmatex">\(Bin(n, p)\)</span></li>
+</ul>
+<p>For each, we generated 100,000 data points to represent the population.</p>
+<h2 id="sampling-and-visualization">Sampling and Visualization</h2>
+<p>For each distribution, we performed the following steps:</p>
+<ol>
+<li>Selected sample sizes: <span class="arithmatex">\(n = 5, 10, 30, 50\)</span></li>
+<li>Drew 1,000 random samples for each sample size.</li>
+<li>Calculated the sample mean for each sample.</li>
+<li>Plotted histograms of these sample means to observe the sampling distribution.</li>
+</ol>
+<h2 id="python-code-for-simulation-uniform-distribution-example">Python Code for Simulation (Uniform Distribution Example)</h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set parameters
+population = np.random.uniform(0, 1, 100000)
+sample_sizes = [5, 10, 30, 50]
+
+plt.figure(figsize=(12, 10))
+
+for i, size in enumerate(sample_sizes, 1):
+    sample_means = [np.mean(np.random.choice(population, size)) for _ in range(1000)]
+    plt.subplot(2, 2, i)
+    sns.histplot(sample_means, kde=True, stat="density", bins=30, color='skyblue')
+    plt.title(f'Sample Size = {size}')
+    plt.xlabel('Sample Mean')
+    plt.ylabel('Density')
+
+plt.tight_layout()
+plt.suptitle('Sampling Distribution of Sample Mean - Uniform(0, 1)', fontsize=16, y=1.02)
+plt.show()
+
+</code></pre>
+<h3 id="visual-output-of-python-script">Visual Output of Python script</h3>
+<h2 id="parameter-exploration">Parameter Exploration</h2>
+<p>As sample size increases, the sampling distribution of the mean becomes more symmetric and bell-shaped.</p>
+<p>Distributions that are initially skewed (like exponential) require larger sample sizes to approximate normality.</p>
+<p>The variance of the original population affects the spread (standard deviation) of the sampling distribution:</p>
+<p><span class="arithmatex">\(\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}\)</span></p>
+<h2 id="results-observations">Results &amp; Observations</h2>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Sample Size</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uniform(0,1)</td>
+<td>5</td>
+<td>Roughly symmetric, not fully normal</td>
+</tr>
+<tr>
+<td></td>
+<td>30, 50</td>
+<td>Sampling distribution approximates normal distribution</td>
+</tr>
+<tr>
+<td>Exponential(λ=1)</td>
+<td>5</td>
+<td>Skewed sample mean distribution</td>
+</tr>
+<tr>
+<td></td>
+<td>30, 50</td>
+<td>Approaches symmetry and normality</td>
+</tr>
+<tr>
+<td>Binomial(n=10, p=0.5)</td>
+<td>5</td>
+<td>Appears somewhat discrete and irregular</td>
+</tr>
+<tr>
+<td></td>
+<td>30, 50</td>
+<td>Becomes smoother and more normal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="practical-applications-of-clt">Practical Applications of CLT</h2>
+<ul>
+<li><strong>Estimation</strong>: Enables reliable estimation of population parameters from sample statistics.</li>
+<li><strong>Quality Control</strong>: Used in control charts to monitor manufacturing processes.</li>
+<li><strong>Finance</strong>: Models returns and risks using normally approximated aggregated data.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Through simulations with Uniform, Exponential, and Binomial distributions:</p>
+<ul>
+<li>The Central Limit Theorem was visually and empirically validated.</li>
+<li>Regardless of the initial distribution, the sample mean distribution tends to normal as sample size increases.</li>
+<li>The rate of convergence is influenced by the original distribution's shape and variance.</li>
+</ul>
+<p>This reinforces the CLT’s importance in both theoretical and practical applications of statistics.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
